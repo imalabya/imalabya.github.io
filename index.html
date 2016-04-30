@@ -5,7 +5,7 @@ description: "Drupal Developer, Open Source Evangelist, Trainer, Occasional Blog
 
 {% for post in paginator.posts %}
 <div class="post-preview">
-  <p class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</p>
+  <div class="post-meta">Posted on {{ post.date | date: "%B %-d, %Y" }}</div>
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
         </h2>
@@ -16,7 +16,6 @@ description: "Drupal Developer, Open Source Evangelist, Trainer, Occasional Blog
         {% endif %}
     </a>
 </div>
-<hr>
 {% endfor %}
 
 <!-- Pager -->

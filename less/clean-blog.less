@@ -26,7 +26,11 @@ h4,
 h5,
 h6 {
 	.sans-serif;
-	font-weight: 800;
+	font-weight: 600;
+}
+
+h3{
+	font-size: 20px;
 }
 
 a {
@@ -231,6 +235,11 @@ hr.small {
 // Post Preview Pages
 
 .post-preview {
+	padding: 25px 0;
+    border-bottom: 1px solid #eee;
+		&:last-child{
+				border-bottom: none;
+		}
 	> a {
 		color: @gray-dark;
 		&:hover,
@@ -240,7 +249,7 @@ hr.small {
 		}
 		> .post-title {
 			font-size: 30px;
-			margin-top: 30px;
+			margin-top: 0;
 			margin-bottom: 10px;
 		}
 		> .post-subtitle {
@@ -251,7 +260,7 @@ hr.small {
 	}
 	> .post-meta {
 		color: @gray;
-		font-size: 18px;
+		font-size: 16px;
 		font-style: italic;
 		margin-top: 0;
 		> a {
@@ -267,7 +276,7 @@ hr.small {
 	@media only screen and (min-width: 768px) {
 		> a {
 			> .post-title {
-				font-size: 36px;
+				font-size: 32px;
 			}
 		}
 	}
@@ -293,7 +302,7 @@ hr.small {
 }
 
 footer {
-	padding: 50px 0 65px;
+	padding-bottom: 20px;
 	.list-inline {
 		margin: 0;
 		padding: 0;
@@ -302,6 +311,7 @@ footer {
 		font-size: 14px;
 		text-align: center;
 		margin-bottom: 0;
+		margin-top: 20px;
 	}
 }
 
