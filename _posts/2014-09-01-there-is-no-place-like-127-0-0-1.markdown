@@ -15,7 +15,7 @@ header-img: "img/post-bg-04.jpg"
 <p>Let’s install Drupal in our localhost using XAMPP in Windows. First we need to setup the XAMPP and when it is up and running we can install Drupal to build our site.</p>
 **Installing XAMPP**
 
-<li> Download the XAMPP for Windows from https://www.apachefriends.org/index.html </li>
+<li> Download the XAMPP for Windows from https://www.apachefriends.org/index.html> </li>
 <li>Install XAMPP like any other software in Windows</li>
 <li>After installation is completed hit the XAMPP control panel</li>
 
@@ -28,20 +28,20 @@ header-img: "img/post-bg-04.jpg"
   Listen 80 by Listen 81
   ServerName localhost:80 by ServerName:81</p>
 
-<li>Now enter <http://localhost/xampp/> in a web browser and boom your local server is up. It should show something like this.</li>
+<li>Now enter http://localhost/xampp/ in a web browser and boom your local server is up. It should show something like this.</li>
 
   <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-2.png" alt="Post Sample Image">
 
 Now that we have our local server lets install Drupal to build an awesome website.
 
-<li>Go to <http://drupal.org/project/drupal> and download the latest Drupal releases.</li>
+<li>Go to http://drupal.org/project/drupal and download the latest Drupal releases.</li>
 <li>Unzip the downloaded zip file and extract it to C:\xampp\htdocs</li>
 <li>Rename the folder according to your comfort. Let’s rename it foobar.</li>
-<li>Goto <http://localhost/phpmyadmin> and login to your PHPMyAdmin and create a database for your Drupal site.</li>
+<li>Goto http://localhost/phpmyadmin and login to your PHPMyAdmin and create a database for your Drupal site.</li>
 
   <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-3.png" alt="Post Sample Image">
 
-<li>Enter <http://localhost/foobar/install.php> in your browser to start the installation.</li>
+<li>Enter http://localhost/foobar/install.php in your browser to start the installation.</li>
 
   <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-4.png" alt="Post Sample Image">
 
