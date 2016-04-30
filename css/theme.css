@@ -272,7 +272,7 @@ hr.small {
   border-bottom-left-radius: 5px;
 }
 footer {
-  padding: 50px 0 40px;
+  padding: 20px 0;
   border-top: 1px solid #eee;
   background: #fafafa;
   margin-top: 20px;
@@ -281,11 +281,16 @@ footer .list-inline {
   margin: 0;
   padding: 0;
 }
-footer .copyright {
-  font-size: 14px;
+footer .footer-bottom {
+  font-size: 12px;
   text-align: center;
   margin-bottom: 0;
   margin-top: 20px;
+}
+footer .footer-bottom img {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 50px;
 }
 .floating-label-form-group {
   font-size: 14px;

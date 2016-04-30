@@ -53,7 +53,15 @@
                     </li>
                     {% endif %}
                 </ul>
-                <div class="copyright text-muted">Copyright &copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }}</div>
+                <div class="footer-bottom">
+                  <span class="copyright text-muted">
+                    Copyright &copy; {{ site.copyright_name }} {{ site.time | date: '%Y' }}
+                  </span>
+                  -
+                  <span class="hosted text-muted">
+                    Hosted on <i class="fa fa-github-alt" aria-hidden="true"></i> Powered By <img src="jekyll.png" />
+                  </span>
+                </div>
             </div>
         </div>
     </div>
