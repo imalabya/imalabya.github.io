@@ -496,10 +496,9 @@ article{
 	padding: 0;
 	li{
 		display: inline-block;
-    list-style: none;
-    padding: 10px;
+		list-style: none;
+		padding: 10px;
 		font-size: 16px;
-		background: @gray-light;
 		a{
 			padding-left: 13px;
 			position: relative;
@@ -510,6 +509,22 @@ article{
 				position: absolute;
 				left: 0;
 			}
+		}
+	}
+}
+
+.bottom-wrap {
+	display: inline-block;
+	width: 100%;
+	.tags-wrap{
+		float: left;
+	}
+	.social-sharing-wrap{
+		float: right;
+	}
+	@media only screen and (max-width: 520px){
+		.tags-wrap, .social-sharing-wrap{
+			float: none;
 		}
 	}
 }

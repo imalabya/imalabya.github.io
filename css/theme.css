@@ -428,7 +428,6 @@ article a:focus {
   list-style: none;
   padding: 10px;
   font-size: 16px;
-  background: #eee;
 }
 .tags li a {
   padding-left: 13px;
@@ -440,4 +439,20 @@ article a:focus {
   content: "#";
   position: absolute;
   left: 0;
+}
+.bottom-wrap {
+  display: inline-block;
+  width: 100%;
+}
+.bottom-wrap .tags-wrap {
+  float: left;
+}
+.bottom-wrap .social-sharing-wrap {
+  float: right;
+}
+@media only screen and (max-width: 520px) {
+  .bottom-wrap .tags-wrap,
+  .bottom-wrap .social-sharing-wrap {
+    float: none;
+  }
 }

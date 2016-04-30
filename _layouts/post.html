@@ -24,16 +24,23 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 content">
-
+        <!-- SocialSharing Ends -->
         {{ content }}
-        
-        <!-- Post Tags -->
-        <ul class="tags">
-          {% for tag in page.tags %}
-          <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
-          {% endfor %}
-        </ul>
 
+        <!-- Post Tags -->
+        <div class="bottom-wrap">
+          <div class="tags-wrap">
+            <ul class="tags">
+              {% for tag in page.tags %}
+              <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="social-sharing-wrap">
+            <!-- Social Sharing -->
+            {% include share.html %}
+          </div>
+        </div>
         <hr>
 
         <!-- Pager -->
@@ -49,35 +56,8 @@ layout: default
           </li>
           {% endif %}
         </ul>
-
-        <!-- Disqus Comments -->
-        <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        var changeThread = function(){
-
-          DISQUS.reset({
-            reload: true,
-            config: function () {
-              this.page.url = "{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}";
-              this.page.identifier = "{{ page.id }}";
-            }
-          });
-
-        };
-        </script>
-
-        <script>
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-
-        s.src = '//imalabya.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        {% include comment.html %}
+      </div>
     </div>
   </div>
-</div>
 </article>
