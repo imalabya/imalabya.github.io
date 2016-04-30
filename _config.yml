@@ -2,14 +2,14 @@
 title: Malabya Tewari
 header-img: img/home-bg.jpg
 email: imalabya@gmail.com
-copyright_name: Your/Project/Corporate Name
+copyright_name: Malabya Tewari
 description: "Drupal developer, Open source enthusiast, trainer, blogger from Bangalore."
 baseurl: ""
 url: "http://imalabya.github.io"
 twitter_username: malabya88
-github_username:  imalabya
+drupal_username:  malavya
 facebook_username:  malabya88
-email_username:  imalabya@gmail.com
+linkedin_username:  https://www.linkedin.com/in/malabyatewari
 
 # Build settings
 markdown: kramdown

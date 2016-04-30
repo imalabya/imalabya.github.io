@@ -32,22 +32,22 @@
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.github_username %}
+                    {% if site.drupal_username %}
                     <li>
-                        <a href="https://github.com/{{ site.github_username }}">
+                        <a href="https://drupal.org/u/{{ site.drupal_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-drupal fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
                     {% endif %}
-                    {% if site.email_username %}
+                    {% if site.linkedin_username %}
                     <li>
-                        <a href="mailto:{{ site.email_username }}">
+                        <a href="{{ site.linkedin_username }}">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
                             </span>
                         </a>
                     </li>
@@ -66,4 +66,4 @@
 <script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
 
 <!-- Custom Theme JavaScript -->
-<script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/theme.min.js " | prepend: site.baseurl }}"></script>
