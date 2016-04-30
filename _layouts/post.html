@@ -26,9 +26,8 @@ layout: default
       <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 content">
 
         {{ content }}
-
-        <hr>
-
+        
+        <!-- Post Tags -->
         <ul class="tags">
           {% for tag in page.tags %}
           <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
@@ -37,6 +36,7 @@ layout: default
 
         <hr>
 
+        <!-- Pager -->
         <ul class="pager">
           {% if page.previous.url %}
           <li class="previous">
@@ -49,7 +49,8 @@ layout: default
           </li>
           {% endif %}
         </ul>
-        <hr>
+
+        <!-- Disqus Comments -->
         <div id="disqus_thread"></div>
         <script type="text/javascript">
         var changeThread = function(){

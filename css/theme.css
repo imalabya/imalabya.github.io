@@ -357,7 +357,7 @@ form .row:first-child .floating-label-form-group {
   color: white;
 }
 .pager {
-  margin: 20px 0 0;
+  margin: 30px 0 50px;
 }
 .pager li > a,
 .pager li > span {
@@ -428,6 +428,7 @@ article a:focus {
   list-style: none;
   padding: 10px;
   font-size: 16px;
+  background: #eee;
 }
 .tags li a {
   padding-left: 13px;
