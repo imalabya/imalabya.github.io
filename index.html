@@ -1,31 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- link to main stylesheet -->
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	<title> Drupalism, Blogs, Life, etc | iMalabya</title>
-</head>
-<body>
-	<div class="container">
-		<div class="blurb">
-			<h1>Hi there, I'm Malabya Tewari!</h1>
-			<h3>Dog Lover | Web Developer | Drupal</h3>
-			<p>Son, Drupaler , quick learner, day dreamer, 24X7 online, loves watching movies. Enthusiatic about my plans and dreams. Likes to play cricket & Badminton!!.. Loves listening to songs while working..
-				I <i class="fa fa-heart"></i> Labradors a LOT.
-			</p>
-		</div><!-- /.blurb -->
-	</div><!-- /.container -->
-	<footer>
-		<span class="social-icons facebook"><a href="https://www.facebook.com/malabya88" target="_blank"><i class="fa fa-facebook"></i></a></span>
-		<span class="social-icons twitter"><a href="https://www.twitter.com/malabya88" target="_blank"><i class="fa fa-twitter"></i></a></span>
-		<span class="social-icons linkedin"><a href="https://in.linkedin.com/in/malabyatewari" target="_blank"><i class="fa fa-linkedin"></i></a></span>
-		<span class="social-icons linkedin"><a href="https://www.drupal.org/u/malavya" target="_blank"><i class="fa fa-drupal"></i></a></span>
-		<span class="social-icons linkedin"><a href="mailto:malabya.tewari@valuebound.com" target="_blank"><i class="fa fa-envelope-o"></i></a></span>
-	</br>
-</br>
-&copy; Malabya Tewari | 2016</br>
-Hosted on <i class="fa fa-github-alt"></i> Github. Soon to be ported from <i class="fa fa-wordpress"></i> to <img src="jekyll.png">
-</footer>
-</body>
-</html>
+---
+layout: page
+description: "A Clean Blog Theme by Start Bootstrap"
+---
+
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+    </a>
+    <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+</div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
+    {% if paginator.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if paginator.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
