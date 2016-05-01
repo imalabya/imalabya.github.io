@@ -4,6 +4,7 @@ header-img: img/home-bg.jpg
 email: imalabya@gmail.com
 copyright_name: Malabya Tewari
 description: "Drupal developer, Open source enthusiast, trainer, blogger from Bangalore."
+keywords: "Malabya Tewari, malavya, Drupal, Drupal Developer"
 baseurl: ""
 url: "http://imalabya.github.io"
 twitter_username: malabya88
@@ -18,4 +19,4 @@ permalink: pretty
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-gems: [jekyll-paginate, jekyll-feed]
+gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap]
