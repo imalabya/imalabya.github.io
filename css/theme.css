@@ -648,6 +648,9 @@ article a:focus {
   border: 1px solid #eee;
   margin-bottom: 30px;
 }
+.addthis_recommended_horizontal a {
+  border: none;
+}
 .addthis_recommended_horizontal .at4-recommended.at-medium .at4-recommended-horizontal {
   max-height: 150pc;
   display: table-row;
