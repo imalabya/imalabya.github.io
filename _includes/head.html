@@ -59,6 +59,8 @@
   {% endif %}
   {% if page.header-img %}
   <meta content="{{ site.url }}/{{ page.header-img }}" property="og:image">
+  {% else %}
+  <meta content="{{ site.url }}/home.jpg" property="og:image">
   {% endif %}
   {% if page.tags %}
   {% for tag in page.tags %}
