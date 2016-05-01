@@ -24,6 +24,9 @@ h3 {
 }
 a {
   color: #404040;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 a:hover,
 a:focus {
@@ -139,16 +142,20 @@ hr.small {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 50px;
 }
 .intro-header .post-heading,
 .intro-header .page-heading {
-  padding: 100px 0 50px;
+  padding: 100px 0 80px;
   color: white;
 }
 .intro-header .site-heading {
   padding: 150px 0;
   color: white;
+}
+@media only screen and (max-width: 415px) {
+  .intro-header .site-heading {
+    padding: 75% 0;
+  }
 }
 .intro-header .site-heading,
 .intro-header .page-heading {
@@ -217,6 +224,9 @@ hr.small {
 }
 .post-preview:last-child {
   border-bottom: none;
+}
+.post-preview:first-child {
+  margin-top: 30px;
 }
 .post-preview > a {
   color: #404040;
@@ -369,11 +379,17 @@ form .row:first-child .floating-label-form-group {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 400;
   letter-spacing: 1px;
   padding: 10px 5px;
   background-color: white;
   border-radius: 0;
+  min-width: 150px;
+  color: #0085A1;
+  border-color: #0085A1;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 @media only screen and (min-width: 768px) {
   .pager li > a,
@@ -387,6 +403,7 @@ form .row:first-child .floating-label-form-group {
   color: white;
   background-color: #0085A1;
   border: 1px solid #0085A1;
+  font-weight: 600;
 }
 .pager .disabled > a,
 .pager .disabled > a:hover,
@@ -419,6 +436,9 @@ body {
 }
 article a {
   border-bottom: 1px solid;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
 }
 article a:hover,
 article a:focus {
@@ -431,7 +451,7 @@ article a:focus {
 .tags li {
   display: inline-block;
   list-style: none;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
   font-size: 16px;
 }
 .tags li a {
@@ -444,6 +464,20 @@ article a:focus {
   content: "#";
   position: absolute;
   left: 0;
+}
+.tags.tags-page {
+  margin-top: 30px;
+}
+.tags.tags-page li {
+  font-size: 20px;
+}
+.tags.tags-page li a {
+  padding-left: 18px;
+}
+.tag-contents {
+  border: 1px solid #eee;
+  padding: 10px 25px;
+  margin: 10px 0;
 }
 .bottom-wrap {
   display: inline-block;
@@ -459,5 +493,14 @@ article a:focus {
   .bottom-wrap .tags-wrap,
   .bottom-wrap .social-sharing-wrap {
     float: none;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .list-inline > li {
+    padding: 0 !important;
+  }
+  .pager li > a,
+  .pager li > span {
+    min-width: 130px;
   }
 }

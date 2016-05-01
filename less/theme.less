@@ -35,6 +35,7 @@ h3{
 
 a {
 	color: @gray-dark;
+	.transition-all;
 	&:hover,
 	&:focus {
 		color: @brand-primary;
@@ -167,15 +168,17 @@ hr.small {
 	background-attachment: scroll;
 	.background-cover;
 	// NOTE: Background images are set within the HTML using inline CSS!
-	margin-bottom: 50px;
 	.post-heading,
 	.page-heading {
-		padding: 100px 0 50px;
+		padding: 100px 0 80px;
 		color: white;
 	}
 	.site-heading{
 		padding: 150px 0;
 		color: white;
+		@media only screen and (max-width: 415px){
+			padding: 75% 0;
+		}
 	}
 	.site-heading,
 	.page-heading {
@@ -245,6 +248,9 @@ hr.small {
 	border-bottom: 1px solid @gray-light;
 	&:last-child{
 		border-bottom: none;
+	}
+	&:first-child{
+		margin-top: 30px;
 	}
 	> a {
 		color: @gray-dark;
@@ -323,8 +329,8 @@ footer {
 		margin-top: 20px;
 		img {
 			display: inline-block;
-	    vertical-align: bottom;
-	    width: 50px;
+			vertical-align: bottom;
+			width: 50px;
 		}
 	}
 }
@@ -427,11 +433,15 @@ form .row:first-child .floating-label-form-group {
 			.sans-serif;
 			text-transform: uppercase;
 			font-size: 14px;
-			font-weight: 800;
+			font-weight: 400;
 			letter-spacing: 1px;
 			padding: 10px 5px;
 			background-color: white;
 			border-radius: 0;
+			min-width: 150px;
+			color: @brand-primary;
+			border-color: @brand-primary;
+			.transition-all;
 			@media only screen and (min-width: 768px) {
 				font-size: 14px;
 				padding: 15px 25px;
@@ -443,6 +453,7 @@ form .row:first-child .floating-label-form-group {
 			color: white;
 			background-color: @brand-primary;
 			border: 1px solid @brand-primary;
+			font-weight: 600;
 		}
 	}
 
@@ -489,6 +500,7 @@ body {
 article{
 	a{
 		border-bottom: 1px solid;
+		.transition-all;
 		&:hover,
 		&:focus {
 			color: @brand-primary;
@@ -502,7 +514,7 @@ article{
 	li{
 		display: inline-block;
 		list-style: none;
-		padding: 10px;
+		padding: 10px 10px 10px 0;
 		font-size: 16px;
 		a{
 			padding-left: 13px;
@@ -516,6 +528,21 @@ article{
 			}
 		}
 	}
+	&.tags-page {
+		margin-top: 30px;
+		li{
+			font-size: 20px;
+			a{
+				padding-left: 18px;
+			}
+		}
+	}
+}
+
+.tag-contents {
+	border: 1px solid @gray-light;
+	padding: 10px 25px;
+	margin: 10px 0;
 }
 
 .bottom-wrap {
@@ -531,5 +558,15 @@ article{
 		.tags-wrap, .social-sharing-wrap{
 			float: none;
 		}
+	}
+}
+
+@media only screen and (max-width: 320px){
+	.list-inline>li {
+		padding: 0 !important;
+	}
+
+	.pager li > a, .pager li > span{
+		min-width: 130px;
 	}
 }

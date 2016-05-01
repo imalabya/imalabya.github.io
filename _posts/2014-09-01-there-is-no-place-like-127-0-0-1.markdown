@@ -4,6 +4,7 @@ title:      "There is no place like 127.0.0.1"
 subtitle:   "A look into how to install Drupal 7 in Windows using XAMPP."
 date:       2014-09-01 12:00:00
 header-img: "img/post-bg-04.jpg"
+tags:       xampp liquid localhost
 ---
 <p>No matter where you go if you have your localhost running then you got a home. A local server is like a playground for developers. Don’t have an internet connection, want to test out dummy lorem ipsum text for content, want to constantly upload photos, these doesn’t matter when you are working on 127.0.0.1 aka “localhost”. With a few clicks you can easily setup your own website using the champ Drupal. The local server is the legs with which a Drupal website can start running like Forrest Gump.</p>
 
