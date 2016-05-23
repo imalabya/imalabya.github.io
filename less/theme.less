@@ -468,20 +468,20 @@ form .row:first-child .floating-label-form-group {
 }
 
 .button {
-    float: left;
-    min-width: 150px;
-    max-width: 250px;
-    display: block;
-    margin: 1em;
-    padding: 1em 2em;
-    border: none;
-    background: none;
-    color: inherit;
-    vertical-align: middle;
-    position: relative;
-    z-index: 1;
-    -webkit-backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
+	float: left;
+	min-width: 150px;
+	max-width: 250px;
+	display: block;
+	margin: 1em;
+	padding: 1em 2em;
+	border: none;
+	background: none;
+	color: inherit;
+	vertical-align: middle;
+	position: relative;
+	z-index: 1;
+	-webkit-backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 /* Itzel */
@@ -713,14 +713,120 @@ article{
 
 // Addthis recomendation
 .addthis_recommended_horizontal {
-    padding: 10px;
-    border: 1px solid #eee;
-    margin-bottom: 30px;
-		a{
-			border: none;
-		}
-		.at4-recommended.at-medium .at4-recommended-horizontal {
-    max-height: 150pc;
-    display: table-row;
+	padding: 10px;
+	border: 1px solid #eee;
+	margin-bottom: 30px;
+	a{
+		border: none;
+	}
+	.at4-recommended.at-medium .at4-recommended-horizontal {
+		max-height: 150pc;
+		display: table-row;
+	}
 }
+
+// About me page
+.about{
+	h2, h3{
+		&:after{
+			content: "";
+			display: block;
+			width: 35%;
+			color: #404040;
+			border: 2px solid;
+		}
+	}
+	a{
+		color: @brand-primary;
+		&:hover{
+			border-bottom: 1px solid;
+		}
+	}
+	.profile-head {
+		font-size: 26px;
+		font-weight: 600;
+		display: inline-block;
+		&:after{
+			content: "";
+			display: block;
+			width: 35%;
+			color: #404040;
+			border: 2px solid;
+		}
+	}
+	.employer-wrapper {
+		display: inline-block;
+		margin-top: 20px;
+		.current-employer {
+			margin-bottom: 20px;
+			border-bottom: 1px solid #eee;
+			padding-bottom: 10px;
+			.company-logo {
+				float: left;
+				margin-right: 10px;
+			}
+			.my-profile {
+				display: block;
+				.employer-name {
+					font-size: 22px;
+					font-weight: 600;
+				}
+				.designation {
+					font-size: 18px;
+				}
+				.work-info {
+					font-size: 14px;
+				}
+				@media only screen and (min-width: 768px) {
+					display: inline-block;
+					width: 70%;
+				}
+			}
+		}
+		.past-employer {
+			padding: 10px 0;
+			.left {
+				display: inline-block;
+				vertical-align: middle;
+				width: 50px;
+				margin-right: 5px;
+			}
+			.right {
+				display: inline-block;
+				width: 70%;
+				vertical-align: middle;
+				.employer {
+					font-size: 16px;
+					font-weight: 600;
+					margin-bottom: 5px;
+				}
+				.designation {
+					font-size: 14px;
+					color: #848484;
+				}
+				.duration {
+					font-size: 12px;
+					color: #848484;
+				}
+			}
+			@media only screen and (max-width: 768px) {
+				.emp-row {
+				  border-bottom: 1px solid #eee;
+				  padding: 10px;
+					&:last-child{
+						border: none;
+					}
+				}
+			}
+		}
+		a{
+			&:hover{
+				border: none;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 992px) {
+
 }

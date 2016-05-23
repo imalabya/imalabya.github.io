@@ -655,3 +655,100 @@ article a:focus {
   max-height: 150pc;
   display: table-row;
 }
+.about h2:after,
+.about h3:after {
+  content: "";
+  display: block;
+  width: 35%;
+  color: #404040;
+  border: 2px solid;
+}
+.about a {
+  color: #0085A1;
+}
+.about a:hover {
+  border-bottom: 1px solid;
+}
+.about .profile-head {
+  font-size: 26px;
+  font-weight: 600;
+  display: inline-block;
+}
+.about .profile-head:after {
+  content: "";
+  display: block;
+  width: 35%;
+  color: #404040;
+  border: 2px solid;
+}
+.about .employer-wrapper {
+  display: inline-block;
+  margin-top: 20px;
+}
+.about .employer-wrapper .current-employer {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.about .employer-wrapper .current-employer .company-logo {
+  float: left;
+  margin-right: 10px;
+}
+.about .employer-wrapper .current-employer .my-profile {
+  display: block;
+}
+.about .employer-wrapper .current-employer .my-profile .employer-name {
+  font-size: 22px;
+  font-weight: 600;
+}
+.about .employer-wrapper .current-employer .my-profile .designation {
+  font-size: 18px;
+}
+.about .employer-wrapper .current-employer .my-profile .work-info {
+  font-size: 14px;
+}
+@media only screen and (min-width: 768px) {
+  .about .employer-wrapper .current-employer .my-profile {
+    display: inline-block;
+    width: 70%;
+  }
+}
+.about .employer-wrapper .past-employer {
+  padding: 10px 0;
+}
+.about .employer-wrapper .past-employer .left {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  margin-right: 5px;
+}
+.about .employer-wrapper .past-employer .right {
+  display: inline-block;
+  width: 70%;
+  vertical-align: middle;
+}
+.about .employer-wrapper .past-employer .right .employer {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.about .employer-wrapper .past-employer .right .designation {
+  font-size: 14px;
+  color: #848484;
+}
+.about .employer-wrapper .past-employer .right .duration {
+  font-size: 12px;
+  color: #848484;
+}
+@media only screen and (max-width: 768px) {
+  .about .employer-wrapper .past-employer .emp-row {
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+  }
+  .about .employer-wrapper .past-employer .emp-row:last-child {
+    border: none;
+  }
+}
+.about .employer-wrapper a:hover {
+  border: none;
+}
