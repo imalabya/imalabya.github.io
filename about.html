@@ -5,7 +5,7 @@ description: "This is what I do."
 header-img: "img/about.jpg"
 ---
 <section class="about">
-  <h3 class="profile-head">Summary</h3>
+  <h2 class="profile-head">Summary</h2>
   <p>Full stack <a href="https://www.drupal.org/u/malavya">Drupal developer</a>,
     an Open Source enthusiast & evanglist, Drupal trainer, quick learner, day dreamer,
     24X7 online, movie buff, Cricket fanatic & an amature player!!..</p>
@@ -20,85 +20,15 @@ header-img: "img/about.jpg"
       Volunteer in DrupalCon Asia '16
     </a></strong>
     <hr>
-
-    <h3 class="profile-head">Experience</h3>
-    <div class="employer-wrapper">
-      <div class="current-employer">
-        <div class="company-logo">
-          <img src="/img/valuebound.png" />
-        </div>
-        <div class="my-profile">
-          <div class="employer-name">
-            <a href="http://www.valuebound.com/">Valuebound</a>
-          </div>
-          <div class="designation">
-            Full Stack Developer
-          </div>
-          <div class="work-info">
-            Currently working @ Valuebound where apart from building awesome Drupal
-            projects also manages and mentors new resources to adapt and get
-            comfortable in the Drupal ecosystem.
-          </div>
-        </div>
-      </div>
-      <div class="past-employer employers row">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 emp-row">
-          <a href="https://www.drupal.org/axelerant">
-            <div class="left">
-              <img src="/img/axl.png" />
-            </div>
-            <div class="right">
-              <div class="employer">
-                Axelerant
-              </div>
-              <div class="designation">
-                Software Developer
-              </div>
-              <div class="duration">
-                July 2013 – December 2014 (1 year 6 months)
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 emp-row">
-          <a href="https://www.demi.co.in/">
-            <div class="left">
-              <img src="/img/demi.png" />
-            </div>
-            <div class="right">
-              <div class="employer">
-                Demi Solutions
-              </div>
-              <div class="designation">
-                Software Developer
-              </div>
-              <div class="duration">
-                February 2013 – July 2013 (6 months)
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 emp-row">
-          <a href="http://sourcen.com/">
-            <div class="left">
-              <img src="/img/sourcen.png" />
-            </div>
-            <div class="right">
-              <div class="employer">
-                Soucen Inc.
-              </div>
-              <div class="designation">
-                Software Developer
-              </div>
-              <div class="duration">
-                June 2012 – July 2013 (1 year 2 months)
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+    <h2>Publications</h2>
+    <div class="row publications">
+      {% include publications.html %}
     </div>
     <hr>
-    <h3 class="profile-head">Portfolio</h3>
+    <h2 class="profile-head">Experience</h2>
+    {% include experience.html %}
+    <hr>
+    <h2 class="profile-head">Portfolio</h2>
+    {% include projects.html %}
 
   </section>

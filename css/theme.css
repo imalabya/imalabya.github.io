@@ -1,6 +1,6 @@
 body {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #404040;
 }
 p {
@@ -655,8 +655,7 @@ article a:focus {
   max-height: 150pc;
   display: table-row;
 }
-.about h2:after,
-.about h3:after {
+.about h2:after {
   content: "";
   display: block;
   width: 35%;
@@ -751,4 +750,21 @@ article a:focus {
 }
 .about .employer-wrapper a:hover {
   border: none;
+}
+.about .publications {
+  margin-top: 20px;
+}
+.about .publications .book-cover .buy {
+  width: 100%;
+  margin-top: 20px;
+}
+.about .publications .book-info .book-title {
+  font-size: 20px;
+}
+.about .publications .book-info ul {
+  padding-left: 20px;
+}
+.about .publications .book-info ul p {
+  margin: 10px 0;
+  font-size: 16px;
 }
