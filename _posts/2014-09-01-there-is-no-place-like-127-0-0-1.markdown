@@ -16,22 +16,22 @@ tags:       xampp liquid localhost
 <p>Let’s install Drupal in our localhost using XAMPP in Windows. First we need to setup the XAMPP and when it is up and running we can install Drupal to build our site.</p>
 **Installing XAMPP**
 
-<li> Download the XAMPP for Windows from https://www.apachefriends.org/index.html> </li>
+<li> Download the XAMPP for Windows from https://www.apachefriends.org/index.html </li>
 <li>Install XAMPP like any other software in Windows</li>
 <li>After installation is completed hit the XAMPP control panel</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/1.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/1.png" alt="Post Sample Image">
 
 <li>Start Apache and MySQL.</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture.png" alt="Post Sample Image">
   <p class="text-muted">If you have IIS or another program using default http port (80), you can change the default port for Apache opening up the config file C:\xampp\apache\conf\http.conf in a text editor and replace the following entries:
   Listen 80 by Listen 81
   ServerName localhost:80 by ServerName:81</p>
 
 <li>Now enter http://localhost/xampp/ in a web browser and boom your local server is up. It should show something like this.</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-2.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture-2.png" alt="Post Sample Image">
 
 Now that we have our local server lets install Drupal to build an awesome website.
 
@@ -40,27 +40,27 @@ Now that we have our local server lets install Drupal to build an awesome websit
 <li>Rename the folder according to your comfort. Let’s rename it foobar.</li>
 <li>Goto http://localhost/phpmyadmin and login to your PHPMyAdmin and create a database for your Drupal site.</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-3.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture-3.png" alt="Post Sample Image">
 
 <li>Enter http://localhost/foobar/install.php in your browser to start the installation.</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-4.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture-4.png" alt="Post Sample Image">
 
 <li>Hit Save and continue. In the next page choose the language which is English by default</li>
 <li>On the next page you need to enter the database details to connect the Drupal site with the database.</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-5.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture-5.png" alt="Post Sample Image">
 
 <li>The Drupal installation will start in the next page.</li>
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-6.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture-6.png" alt="Post Sample Image">
 
 <li>Enter your website details like Site name, the super user/admin username and password, time zone, etc.</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-8.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture-8.png" alt="Post Sample Image">
 
 <li>Save and Continue. And you are done. Now checkout you’re your new website running in your local server.</li>
 
-  <img src="{{ site.baseurl }}/img/there-is-no-place-like/capture-9.png" alt="Post Sample Image">
+  <img src="{{ site.baseurl }}/img/posts/there-is-no-place-like-127-0-0-1/capture-9.png" alt="Post Sample Image">
 
 Related Links:
 
