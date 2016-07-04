@@ -776,4 +776,5 @@ pre {
   background: white;
   border-radius: 0;
   border-left: 5px solid #404040;
+  word-break: break-word;
 }
