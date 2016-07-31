@@ -41,6 +41,9 @@ blockquote {
   color: #808080;
   font-style: italic;
 }
+blockquote p {
+  margin: 0;
+}
 hr.small {
   max-width: 100px;
   margin: 15px auto;
@@ -773,8 +776,23 @@ article a:focus {
   font-size: 14px;
 }
 pre {
-  background: white;
-  border-radius: 0;
-  border-left: 5px solid #404040;
+  background: #000 !important;
+  border-radius: 3px;
+  border: 1px solid #404040;
   word-break: break-word;
+  box-shadow: 0px 0px 5px #404040;
+  color: white;
+}
+.highlight pre {
+  background-color: #000 !important;
+  border: 1px solid #404040 !important;
+}
+kbd {
+  padding: 0;
+  font-size: 90%;
+  color: #e74c3c;
+  background-color: #fff;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadon: none;
 }
