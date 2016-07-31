@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="keywords" content="{% if page.tags %}{{ page.tags }}{% else %}{{ site.keywords }}{% endif %}">
 
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} | {{ site.description }}{% endif %} </title>
 
