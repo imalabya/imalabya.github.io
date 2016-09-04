@@ -4,7 +4,7 @@ title:      "How to Programmatically Add Grouping in Views in Drupal 8"
 subtitle:   "Add grouping to views based on conditions or whenever you need via code."
 date:       2016-07-31 12:00:00
 header-img: "img/post-bg-04.jpg"
-tags:       Drupal 8, Views, Snippet
+tags:       Drupal8 Views Snippet
 ---
 
 Recently, I encountered a situation where I had to add grouping in Views based on a condition. The scenario was - I had an exposed sorting dropdown which had three options viz. Date(Asc), Date(Desc) & Category. Now when a user will sort the Views using Category then the Views should be grouped by the category names.
@@ -17,9 +17,6 @@ With all these gatherings and a couple of hours of hit and trials finally I had 
 
 {% highlight php%}
 <?php
-/**
- * Implements hook_views_pre_build().
- */
 function MODULENAME_views_pre_build(ViewExecutable $view) {
   $params = Drupal::request()->getQueryString();
   if (strstr($params, 'sort_by=field_category_target_id')) {
