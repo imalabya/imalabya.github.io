@@ -79,7 +79,7 @@ hr.small {
   -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .navbar-custom .nav li a {
     color: #fff;
   }
