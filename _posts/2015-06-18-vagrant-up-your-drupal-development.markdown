@@ -4,7 +4,7 @@ title:      "Vagrant Up your Drupal Development"
 subtitle:   "Run Drupal in Vagrant to get their own sandboxed environments to play with."
 date:       2015-06-18 12:00:00
 header-img: "img/post-bg-04.jpg"
-tags:       drupal installation ubuntu vagrant
+tags:       drupalplanet installation ubuntu vagrant
 ---
 
 Vagrant is around for quite a time now and people prefer to work on virtual machine running locally for a faster performance. But I personally despise working on a Virtual Box mainly because it is a big pain setting it up for each project and if something screws up do it all over again. Though the performance was really shooting sky when I ran a Drupal project running in a Virtual Box. But Vagrant made my life easier. And with PuPHPet, well it is just a cherry on top.

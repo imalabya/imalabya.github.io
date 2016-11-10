@@ -3,7 +3,7 @@ layout:     post
 title:      "TIL – Access object properties via variable"
 date:       2015-04-10 12:00:00
 header-img: "img/post-bg-05.jpg"
-tags:       drupal drupal7 php
+tags:       drupalplanet drupal7 php
 ---
 
 Have been struggling a lot since morning doing a simple stuff. Goal was to create a node object by adding the node field object properties dynamically. Everything looked fine but it was not working. After nearly burning around 4 hours I finally got the mistake and seriously makes me feel like a noob😦
