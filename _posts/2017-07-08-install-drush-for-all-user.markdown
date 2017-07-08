@@ -2,7 +2,7 @@
 layout:     post
 title:      "Install Drush for all users"
 subtitle:   "Let all users in the system enjoy the power of Drush"
-date:       2016-11-25 12:00:00
+date:       2017-07-08 12:00:00
 header-img: "img/post-bg-02.jpg"
 tags:       drupal drush
 ---
