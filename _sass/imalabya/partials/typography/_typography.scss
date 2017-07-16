@@ -1,0 +1,51 @@
+@font-face {
+	font-family: 'AzoSans-Regular';
+	src: url('../../assets/fonts/AzoSans-Regular/AzoSans-Regular.eot');
+	src: url('../../assets/fonts/AzoSans-Regular/AzoSans-Regular.woff') format('woff'), url('../../assets/fonts/AzoSans-Regular/AzoSans-Regular.ttf') format('truetype'), url('../../assets/fonts/AzoSans-Regular/AzoSans-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'AzoSans-Bold';
+  src: url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.eot');
+  src: url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.woff') format('woff'), url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.ttf') format('truetype'), url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AzoSans-Light';
+  src: url('../../assets/fonts/AzoSans-Light/AzoSans-Light.eot');
+  src: url('../../assets/fonts/AzoSans-Light/AzoSans-Light.woff') format('woff'), url('../../assets/fonts/AzoSans-Light/AzoSans-Light.ttf') format('truetype'), url('f../../assets/onts/AzoSans-Light/AzoSans-Light.svg') format('svg');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: $azosans-bold;
+}
+
+a{
+	color: $link-color;
+	text-decoration: none;
+	@include transition(.25s, color);
+	&:hover{
+		color: $link-color-hover;
+		text-decoration: none !important;
+	}
+}
+
+.muted{
+  opacity: .6;
+}
+
+.small{
+  font-size: 80%;
+}
+
+blockquote{
+  border-left: 0;
+  position: relative;
+  padding: 0;
+}

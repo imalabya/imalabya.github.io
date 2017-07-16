@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+{% include head.html %}
+
+<body class="{% if page.title %}page-type-post{% else %}homepage{% endif %}" id='site-body'>
+
+  {% include header.html %}
+
+  <main class="page-content" aria-label="Content">
+
+    {% if page.title == FALSE %}
+      {% include banner.html %}
+    {% endif %}
+
+    <div class="wrapper main-content pad5">
+      {{ content }}
+    </div>
+  </main>
+
+  {% include footer.html %}
+
+</body>
+
+</html>

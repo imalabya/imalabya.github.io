@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item mv3 pad3 zero-margin-top zero-pad-top">
+      <span class="post-meta">Posted on {{ post.date | date: "%b %-d, %Y" }}</span>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+          {{ post.title | escape }}
+        </h2>
+        <p class="post-subtitle zero-margin-bottom">{{post.subtitle}}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

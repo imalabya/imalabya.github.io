@@ -1,0 +1,54 @@
+/* Homepage */
+.post-item{
+  border-bottom: 1px solid $whisper;
+  .post-title{
+    margin-bottom: .5rem;
+    line-height: 1;
+    font-size: 1.8rem;
+    letter-spacing: normal;
+    font-family: $azosans-regular;
+    font-weight: 600;
+  }
+  .post-subtitle{
+    color: $body-color;
+    font-size: rem(18);
+  }
+  .post-meta{
+    font-family: $lora;
+  }
+}
+
+.hero-banner{
+  text-align: center;
+  min-height: 35rem;
+  background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500188230/universe_soujvz.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  &:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0
+  }
+  @media screen and ($bp-smaller-than-tablet){
+    min-height: 25rem;
+  }
+}
+
+.hero-text{
+  padding: 11.5rem 10.5rem;
+  color: #fff;
+  font-size: 200%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  text-align: center;
+  span{
+    border-bottom: 3px solid $link-color-hover;
+  }
+  @media screen and ($bp-smaller-than-tablet){
+    padding: 8.5rem .5rem;
+    font-size: 120%;
+  }
+}

@@ -1,0 +1,44 @@
+/* Variables */
+
+// Greyscale UI Colors
+$white: #fff;
+$black: #000;
+$eclipse: #3d3d3d;
+$grey: #999;
+$light-grey: #ccc;
+$whisper: #eee;
+$snow: #fafafa;
+
+// Colors
+$primary: #005ea5;
+$secondary: #1f191a;
+$link-color: $primary;
+$charcoal: #36454f;
+$link-color-hover: #D91E18;
+$body-color: #222;
+$heading-color: #222;
+$block-title-color: $secondary;
+
+// Font Weights
+$light: 300;
+$normal: 400;
+$semi-bold: 600;
+$bold: 700;
+
+// Fonts
+$azosans-regular: 'AzoSans-Regular', sans-serif;
+$azosans-bold: 'AzoSans-Bold', sans-serif;
+$azosans-light: 'AzoSans-Light', sans-serif;
+$lora: 'Lora', serif;
+
+// Breakpoints
+$bp-smaller-than-mobile: "max-width: 400px" !default;
+$bp-smaller-than-phablet: "max-width: 550px" !default;
+$bp-smaller-than-tablet: "max-width: 769px" !default;
+$bp-smaller-than-desktop: "max-width: 1000px" !default;
+$bp-smaller-than-desktophd: "max-width: 1200px" !default;
+$bp-larger-than-mobile    : "min-width: 400px" !default;
+$bp-larger-than-phablet   : "min-width: 550px" !default;
+$bp-larger-than-tablet    : "min-width: 769px" !default;
+$bp-larger-than-desktop   : "min-width: 1000px" !default;
+$bp-larger-than-desktophd : "min-width: 1200px" !default;

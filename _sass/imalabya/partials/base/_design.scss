@@ -1,0 +1,54 @@
+/* Deisgn SASS */
+
+body{
+  background: $white;
+  font-family: $azosans-light;
+  font-size: rem(16);
+  line-height: 1.4;
+}
+
+.site-header{
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  top: 0;
+  border: none;
+  @include transition(.25s, all);
+  .site-title, .site-nav .page-link{
+    color: $white;
+  }
+  &.nav-up{
+    top: -3.5rem;
+    background: transparentize($white, .2);
+    border-bottom: 1px solid $charcoal;
+    @include box;
+  }
+  &.nav-down{
+    background: transparentize($white, .2);
+    border-bottom: 1px solid $charcoal;
+    @include box;
+    .site-title, .site-nav .page-link{
+      color: $charcoal;
+    }
+  }
+  &.nav-top{
+    background: transparent;
+    border: none;
+    .site-title, .site-nav .page-link{
+      color: $white;
+    }
+  }
+}
+
+.page-type-post{
+  .site-header{
+    border-bottom: 1px solid $charcoal;
+    @include box;
+    .site-title, .site-nav .page-link{
+      color: $charcoal;
+    }
+  }
+  .page-content{
+    margin-top: 3.5rem;
+  }
+}
