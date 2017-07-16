@@ -7,23 +7,23 @@
 }
 
 @font-face {
-  font-family: 'AzoSans-Bold';
-  src: url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.eot');
-  src: url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.woff') format('woff'), url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.ttf') format('truetype'), url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.svg') format('svg');
-  font-weight: bold;
-  font-style: normal;
+	font-family: 'AzoSans-Bold';
+	src: url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.eot');
+	src: url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.woff') format('woff'), url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.ttf') format('truetype'), url('../../assets/fonts/AzoSans-Bold/AzoSans-Bold.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
 }
 
 @font-face {
-  font-family: 'AzoSans-Light';
-  src: url('../../assets/fonts/AzoSans-Light/AzoSans-Light.eot');
-  src: url('../../assets/fonts/AzoSans-Light/AzoSans-Light.woff') format('woff'), url('../../assets/fonts/AzoSans-Light/AzoSans-Light.ttf') format('truetype'), url('f../../assets/onts/AzoSans-Light/AzoSans-Light.svg') format('svg');
-  font-weight: lighter;
-  font-style: normal;
+	font-family: 'AzoSans-Light';
+	src: url('../../assets/fonts/AzoSans-Light/AzoSans-Light.eot');
+	src: url('../../assets/fonts/AzoSans-Light/AzoSans-Light.woff') format('woff'), url('../../assets/fonts/AzoSans-Light/AzoSans-Light.ttf') format('truetype'), url('f../../assets/onts/AzoSans-Light/AzoSans-Light.svg') format('svg');
+	font-weight: lighter;
+	font-style: normal;
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family: $azosans-bold;
+	font-family: $azosans-bold;
 }
 
 a{
@@ -37,15 +37,41 @@ a{
 }
 
 .muted{
-  opacity: .6;
+	opacity: .6;
 }
 
 .small{
-  font-size: 80%;
+	font-size: 80%;
 }
 
 blockquote{
-  border-left: 0;
-  position: relative;
-  padding: 0;
+	border-left: 0;
+	position: relative;
+	padding: 0;
+}
+
+pre{
+	position: relative;
+	border-radius: 0;
+	width: 120%;
+	margin-left: -10%;
+	padding: 2rem;
+	&:before{
+		content: '';
+		display: block;
+		width: 8px;
+		height: 100%;
+		position: absolute;
+		background: $brand;
+		left: 0;
+		top: 0;
+	}
+	@media screen and ($bp-smaller-than-tablet) and ($bp-larger-than-phablet){
+		width: calc(100vw - 9%);
+		margin-left: -2%;
+	}
+	@media screen and ($bp-smaller-than-phablet){
+		width: calc(100vw - 17%);
+		margin-left: -4%;
+	}
 }

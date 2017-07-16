@@ -12,12 +12,21 @@ layout: default
     </p>
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
-
-  <div class="post-content" itemprop="articleBody">
-    {{ content }}
-  </div>
-
-  {% if site.disqus.shortname %}
+  <div class="page-content">
+    <div class="post-content mv6 zero-margin-top" itemprop="articleBody">
+      {{ content }}
+    </div>
+    <div class="post-content-bottom mv3">
+      <div class="tags">
+        {% for tag in page.tags %}
+        <span class="tag"><a href="/tags#{{ tag }}" class="tag">#{{ tag }}</a></span>
+        {% endfor %}
+      </div>
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <div class="addthis_sharing_toolbox"></div>
+    </div>
+    {% if site.disqus.shortname %}
     {% include disqus.html %}
-  {% endif %}
+    {% endif %}
+  </div>
 </article>
