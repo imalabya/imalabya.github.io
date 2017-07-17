@@ -27,6 +27,7 @@
   -webkit-box-shadow: $charcoal 0 .5rem 4rem;
   -mox-box-shadown: $charcoal 0 .5rem 4rem;
   box-shadow: $charcoal 0 .5rem 4rem;
+  margin-bottom: 2rem;
   &:after{
     content: '';
     position: absolute;
@@ -60,5 +61,21 @@
   .ilogo{
     border: .25rem solid $whisper;
     border-radius: 50%;
+  }
+}
+
+.rss-subscribe{
+  text-align: center;
+  a{
+    position: relative;
+    &:after{
+      content: '';
+      width: 1rem;
+      height: 1rem;
+      background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500270729/rss_aebjq0.png') no-repeat;
+      display: inline-block;
+      background-size: 1rem;
+      margin-left: .75rem;
+    }
   }
 }

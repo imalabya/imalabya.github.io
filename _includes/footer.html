@@ -1,50 +1,26 @@
 <footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title | escape }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>
-            {% if site.author %}
-              {{ site.author | escape }}
-            {% else %}
-              {{ site.title | escape }}
-            {% endif %}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description | escape }}</p>
-      </div>
+  <div class="expanded-wrapper">
+    <div class="footer-social">
+      <a href="#"><span class="social-link facebook"></span></a>
+      <a href="#"><span class="social-link twitter"></span></a>
+      <a href="#"><span class="social-link drupal"></span></a>
+      <a href="#"><span class="social-link linkedin"></span></a>
+      <a href="#"><span class="social-link github"></span></a>
+      <a href="#"><span class="social-link instagram"></span></a>
     </div>
-
+    <div class="footer mv2 pad1">
+      <div class="strike"></div>
+      <div class="footer-info">
+        <p class="zero-margin-bottom">Made with <span class="like"></span> using <span class="jekyll"></span> Host on <a href="#" class="fancy">Github Pages</a></p>
+      </div>
+      <div class="strike"></div>
+    </div>
   </div>
-
+  <div class="copyright muted small">
+    Copyright &copy; 2014 - {{ site.time | date: '%Y' }} - {{ site.title }}
+  </div>
 </footer>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57251a056347c57d" async defer></script> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57251a056347c57d" async defer></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
