@@ -26,7 +26,11 @@ layout: default
       <div class="addthis_sharing_toolbox"></div>
     </div>
     {% if site.disqus.shortname %}
-    {% include disqus.html %}
+    <!-- An element a visitor can click if they <3 comments! -->
+    <button class="show-comments">Leave a Comment</button>
+
+    <!-- The empty element required for Disqus to loads comments into -->
+    <div id="disqus_thread"></div>
     {% endif %}
   </div>
 </article>

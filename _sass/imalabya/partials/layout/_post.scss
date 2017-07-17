@@ -48,3 +48,13 @@
     }
   }
 }
+
+.show-comments{
+  width: 100%;
+  background: transparent;
+  border: 1px solid $light-grey;
+  color: $grey;
+  font-size: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+}

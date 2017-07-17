@@ -3,13 +3,13 @@
 
 {% include head.html %}
 
-<body class="{% if page.title %}page-type-post{% else %}homepage{% endif %}" id='site-body'>
+<body class="{% if page.url == '/' %}homepage{% else %}page-type-post{% endif %}" id='site-body'>
 
   {% include header.html %}
 
   <main class="page" id="page" aria-label="Content">
 
-    {% if page.title == FALSE %}
+    {% if page.url == "/" %}
       {% include banner.html %}
     {% endif %}
 

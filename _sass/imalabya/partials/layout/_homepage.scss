@@ -24,6 +24,9 @@
   background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500188230/universe_soujvz.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
+  -webkit-box-shadow: $charcoal 0 .5rem 4rem;
+  -mox-box-shadown: $charcoal 0 .5rem 4rem;
+  box-shadow: $charcoal 0 .5rem 4rem;
   &:after{
     content: '';
     position: absolute;
@@ -37,7 +40,7 @@
 }
 
 .hero-text{
-  padding: 11.5rem 10.5rem;
+  padding: 8.5rem 10.5rem;
   color: #fff;
   font-size: 200%;
   position: absolute;
@@ -50,5 +53,12 @@
   @media screen and ($bp-smaller-than-tablet){
     padding: 8.5rem .5rem;
     font-size: 120%;
+  }
+  h1{
+    display: none;
+  }
+  .ilogo{
+    border: .25rem solid $whisper;
+    border-radius: 50%;
   }
 }
