@@ -3,7 +3,7 @@
 
 {% include head.html %}
 
-<body class="{% if page.url == '/' %}homepage{% else %}page-type-post{% endif %}" id='site-body'>
+<body class="{% if page.url == '/' %}homepage{% else %}page-type-post {{page.title | downcase | replace: ' ','-' | prepend: 'path-'}}{% endif %}" id='site-body'>
 
   {% include header.html %}
 

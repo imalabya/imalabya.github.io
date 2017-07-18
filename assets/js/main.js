@@ -74,3 +74,7 @@ $(document).ready(function() {
     $(this).fadeOut();
   });
 });
+
+$(document).ready(function() {
+  $('.page-type-post').hide(0).delay(250).fadeIn(1000);
+});
