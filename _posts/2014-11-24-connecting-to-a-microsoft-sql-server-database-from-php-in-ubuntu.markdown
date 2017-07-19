@@ -28,11 +28,12 @@ Without further ado, here are the steps you should follow to get this working.
 <kbd>sudo vim /etc/freetds/freetds.conf</kbd>
 
     Add this at the end of the file:
-
-        [yourserver]
-        host = your.server.name
-        port = 1433
-        tds version = 8.0
+{% highlight bash %}
+[yourserver]
+host = your.server.name
+port = 1433
+tds version = 8.0
+{% endhighlight %}
 
 5. Test FreeTDS using server name<br/>
 <kbd>tsql -S yourserver -U yourusername -P yourpassword -D yourdatabasename</kbd><br/>

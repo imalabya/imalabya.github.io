@@ -12,17 +12,19 @@ Usually every Ubuntu user uses the terminal a lot. Commands like clear, pwd, ls,
 
 Thus to save the day comes <kbd>alias</kbd>. Aliases are shorthand for terminal commands and can be created very easily.  We just need to create a file in home folder and add the aliases there then configure <kbd>bashrc</kbd>.
 
-    #This will create a blank file in your home folder
-    sudo nano .bash_aliases
+{% highlight shell %}
+#This will create a blank file in your home folder
+sudo nano .bash_aliases
 
-    #Add the alias in the file and save the file.
-    alias clr="clear"
+#Add the alias in the file and save the file.
+alias clr="clear"
 
-    #Configure your .bashrc
-    . ~/.bashrc
+#Configure your .bashrc
+. ~/.bashrc
 
-    #Check the alias.
-    alias
+#Check the alias.
+alias
+{% endhighlight %}
 
 Now you can just type 'clr' to clear out your terminal.
 
@@ -30,7 +32,7 @@ So it is that easy to command your Ubuntu:)
 
 To create more complex aliases where multiple commands needs to be run we need to add it like:
 
-    alias restart-apache="sudo services apache2 restart; sudo services mysql restart"
+`alias restart-apache="sudo services apache2 restart; sudo services mysql restart"`
 
 Now we an just use <kbd>restart-apache</kbd> to run the commands.
 

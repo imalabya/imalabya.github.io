@@ -10,11 +10,23 @@
     .post-title{
       font-size: 3.75rem;
       font-family: $azosans-regular;
+      position: relative;
+      &:before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        background: $link-color-hover;
+        width: 1200%;
+        right: 95%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
   .post-content{
     font-size: 1.25rem;
     line-height: 1.75;
+    border-bottom: 1px dotted $light-grey;
     p, .highlight {
       margin-bottom: 1.5rem;
     }
@@ -32,19 +44,19 @@
       }
     }
   }
+
   .post-content-bottom{
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     > div{
-      display: inline-block;
-      margin-left: .5rem;
-      vertical-align: top;
+      margin-bottom: 1rem;
+      overflow: auto;
     }
     .tags{
-      width: 80%;
-      line-height: 2.5;
-      .tag{
-        margin-right: 1rem
-      }
+      float: left;
+      width: 70%;
+    }
+    .share{
+      float: right;
     }
   }
 }
@@ -57,4 +69,31 @@
   font-size: 1rem;
   padding: 1rem;
   cursor: pointer;
+}
+
+.PageNavigation{
+  margin-top: 1rem;
+  width: 100%;
+  .pager{
+    float: left;
+    width: 50%;
+  }
+  .prev{
+    text-align: left;
+    span{
+      display: inline-block;
+      margin-right: .5rem;
+      top: -.0625em;
+      transform: translate3d(0,0,0);
+      transition: transform .15s ease;
+    }
+    &:hover{
+      span{
+        transform: translate3d(-.5em,0,0);
+      }
+    }
+  }
+  .next{
+    text-align: right;
+  }
 }

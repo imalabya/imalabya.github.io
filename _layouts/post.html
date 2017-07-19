@@ -13,18 +13,29 @@ layout: default
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
   <div class="page-content">
-    <div class="post-content mv6 zero-margin-top" itemprop="articleBody">
+    <div class="post-content mv2 pad2 zero-margin-top zero-pad-top" itemprop="articleBody">
       {{ content }}
     </div>
+
     <div class="post-content-bottom mv3">
       <div class="tags">
         {% for tag in page.tags %}
         <span class="tag"><a href="/tags#{{ tag }}" class="tag">#{{ tag }}</a></span>
         {% endfor %}
       </div>
-      <!-- Go to www.addthis.com/dashboard to customize your tools -->
-      <div class="addthis_sharing_toolbox"></div>
+      <div class="share left">
+        <div class="addthis_sharing_toolbox"></div>
+      </div>
+      <div class="PageNavigation">
+        {% if page.previous.url %}
+        <a class="prev pager" href="{{page.previous.url}}"><span>&larr;</span>Previous</a>
+        {% endif %}
+        {% if page.next.url %}
+        <a class="next pager" href="{{page.next.url}}">Next<span>&rarr;</span></a>
+        {% endif %}
+      </div>
     </div>
+
     {% if site.disqus.shortname %}
     <!-- An element a visitor can click if they <3 comments! -->
     <button class="show-comments">Leave a Comment</button>

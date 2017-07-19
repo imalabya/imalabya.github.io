@@ -2,6 +2,19 @@
   .post-header{
     display: none;
   }
+  h1{
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: $link-color-hover;
+      width: 1200%;
+      right: 102%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
   .book{
     float: right;
   }
@@ -21,6 +34,7 @@
     float: left;
     width: 30%;
     margin-right: 1rem;
+    margin-top: 1rem;
     font-size: 90%;
     img{
       float: left;

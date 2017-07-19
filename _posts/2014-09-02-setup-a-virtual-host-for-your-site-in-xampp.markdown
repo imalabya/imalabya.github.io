@@ -18,7 +18,8 @@ Adding a Virtual Host in XAMPP is not very difficult. All you need to do is to e
 
 Go to <kbd>C:\windows\system32\drivers\etc\</kbd>  and open the file hosts in a Notepad with administrative rights.
 
-    You may not be able to see the windows folder–some files are hidden by default under Windows. Here are instructions to make those files visible.
+You may not be able to see the windows folder–some files are hidden by default under Windows. Here are instructions to make those files visible.
+{:.info}
 
 Add the following line to the end of the hosts  file.  
 `127.0.0.1 site1.dev`
@@ -36,7 +37,7 @@ This is the file which tell the Web Server about the Virtual Hosts residing your
 
 I suppose you have a directory placed under <kbd>C:\xampp\htdocs\site1</kbd> then you can go ahead and add the following line to end of the file.
 
-```
+{% highlight conf %}
 NameVirtualHost *
   <VirtualHost *>
     DocumentRoot "C:\xampp\htdocs"
@@ -50,8 +51,7 @@ NameVirtualHost *
     Allow from all
   </Directory>
 </VirtualHost>
-```
-
+{% endhighlight %}
 
 Whenever you need to add more Virtual Hosts just copy the code from here and paste. You need to change the directory portion though.
 

@@ -56,16 +56,6 @@ pre{
 	width: 120%;
 	margin-left: -15%;
 	padding: 2rem;
-	&:before{
-		content: '';
-		display: block;
-		width: 8px;
-		height: 100%;
-		position: absolute;
-		background: $brand;
-		left: 0;
-		top: 0;
-	}
 	@media screen and ($bp-smaller-than-tablet) and ($bp-larger-than-phablet){
 		width: calc(100vw - 9%);
 		margin-left: -2%;
@@ -73,6 +63,23 @@ pre{
 	@media screen and ($bp-smaller-than-phablet){
 		width: calc(100vw - 17%);
 		margin-left: -4%;
+	}
+}
+
+code{
+	background: transparent;
+  color: $whisper;
+}
+
+p{
+	code{
+		color: $link-color-hover;
+		border: none;
+		font-size: 100%;
+	}
+	&.info{
+		border-left: 5px solid $charcoal;
+		padding: .5rem 1rem;
 	}
 }
 
