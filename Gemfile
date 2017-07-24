@@ -22,3 +22,10 @@ gem "minima"
 # group :jekyll_plugins do
 #   gem "jekyll-github-metadata", "~> 1.0"
 # end
+
+group :jekyll_plugins do
+  gem "jekyll-paginate"
+  gem "jekyll-feed"
+  gem "jekyll-sitemap"
+  gem "jekyll-watch"
+end

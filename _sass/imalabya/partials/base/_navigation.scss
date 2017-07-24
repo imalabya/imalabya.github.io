@@ -1,0 +1,290 @@
+.hamburger {
+  padding: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  transition-property: opacity, filter;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  font: inherit;
+  color: inherit;
+  text-transform: none;
+  background-color: transparent;
+  border: 0;
+  margin: 0;
+  overflow: visible;
+  line-height: 1;
+  &:hover{
+    opacity: 0.7;
+  }
+}
+
+.hamburger-box {
+  width: 40px;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
+
+.hamburger-inner {
+  display: block;
+  top: 50%;
+  margin-top: -2px;
+}
+
+.hamburger-inner::before{
+  width: 28px !important;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  position: absolute;
+  transition-property: transform;
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  content: "";
+  display: block;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  bottom: -10px;
+}
+
+.hamburger--spin .hamburger-inner {
+  transition-duration: 0.22s;
+  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+.hamburger--spin .hamburger-inner::before {
+  transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in;
+}
+.hamburger--spin .hamburger-inner::after {
+  transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.hamburger--spin.is-active .hamburger-inner {
+  transform: rotate(225deg);
+  transition-delay: 0.12s;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.hamburger--spin.is-active .hamburger-inner::before {
+  top: 0;
+  opacity: 0;
+  transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out;
+}
+.hamburger--spin.is-active .hamburger-inner::after {
+  bottom: 0;
+  transform: rotate(-90deg);
+  transition: bottom 0.1s ease-out, transform 0.22s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.site--menu{
+  overflow: hidden;
+  display: block;
+  .humburger-menu{
+    float: right;
+    z-index: 100;
+    .text-menu{
+      color: $white;
+      display: inline-block;
+      vertical-align: super;
+    }
+  }
+  .push-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    visibility: hidden;
+    opacity: 0;
+    @include transition(.25s, all) ;
+    .pw-wrapper{
+      max-width: 75rem;
+      margin: auto;
+      padding: 0 1rem;
+      position: relative;
+      height: 100%;
+      display: block;
+    }
+    .pm-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #e53935;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #e35d5b, #e53935);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      opacity: 0;
+      @include transition(.25s, all);
+    }
+    .pm-container {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 100%;
+      -webkit-transform: translateX(300px);
+      -moz-transform: translateX(300px);
+      transform: translateX(300px);
+      @include transition(.25s, all);
+    }
+    .pw-wrap{
+      display: block;
+      overflow: hidden;
+      height: 100%;
+      padding: 5rem 0;
+      .site-nav{
+        float: none;
+        clear: both;
+        text-align: right;
+        .menu{
+          list-style: none;
+          overflow: hidden;
+          padding: 0 3rem;
+          margin: 0;
+          font-size: 2.5rem;
+          .menu-item{
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+    &.show-menu{
+      visibility: visible;
+      opacity: 1;
+      .pm-overlay{
+        opacity: 1;
+      }
+      .pm-container, .pm-quote {
+        -webkit-transform: translateX(0px);
+        -moz-transform: translateX(0px);
+        transform: translateX(0px);
+      }
+    }
+  }
+}
+
+@media screen and ($bp-smaller-than-tablet) {
+  .site-nav{
+    position: relative;
+    background: transparent;
+    border: none;
+    text-align: center;
+    .menu{
+      padding: 0;
+    }
+  }
+  .pm-container{
+    width: 100%;
+  }
+}
+
+.pm-quote{
+  position: absolute;
+  top: 20rem;
+  width: 33rem;
+  -webkit-transform: translateX(-300px);
+  -moz-transform: translateX(-300px);
+  transform: translateX(-300px);
+  @include transition(.25s, all);
+  blockquote{
+    color: $black;
+    font-family: $lora;
+    font-size: 2.7rem;
+    line-height: 1;
+    .pm-quote-first{
+      font-size: 3rem;
+      padding-left: 3rem;
+      &:before{
+        content: "“";
+        font-size: 7rem;
+        font-family: cursive;
+        position: absolute;
+        top: -2rem;
+        left: 0;
+        color: #fff;
+      }
+    }
+    .pm-quote-second{
+      font-size: 2.1rem
+    }
+    .pm-quote-third{
+      font-size: 2.4rem;
+    }
+    .pm-quote-last{
+      font-size: 3.2rem;
+    }
+  }
+  cite{
+    color: white;
+    font-style: normal;
+    text-transform: uppercase;
+    display: block;
+    text-align: right;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      height: 2px;
+      background: $white;
+      width: 1200%;
+      right: 30%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.site-nav{
+  .menu-item{
+    overflow: hidden;
+  }
+  .page-link{
+    overflow: hidden;
+    padding: 0 4px;
+    height: 1em;
+    span{
+      position: relative;
+      display: inline-block;
+      -webkit-transition: -webkit-transform 0.3s;
+      -moz-transition: -moz-transform 0.3s;
+      transition: transform 0.3s;
+      &:before{
+        position: absolute;
+        top: 100%;
+        content: attr(data-hover);
+        font-weight: 700;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+      }
+    }
+    &:hover{
+      span{
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        transform: translateY(-100%);
+      }
+    }
+  }
+}
+
+.menu-open{
+  .site-title, .site-links, .text-menu{
+    color: $white !important;
+  }
+  .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after{
+    background: $white !important;
+  }
+}

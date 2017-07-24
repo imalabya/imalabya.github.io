@@ -3,9 +3,9 @@ layout: default
 ---
 
 <div class="page-content">
-
+  <h2 class="line-heading">Recent Blogs</h2>
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts limit:5 %}
     <li class="post-item mv3 pad3 zero-margin-top zero-pad-top">
       <span class="post-meta">Posted on {{ post.date | date: "%b %-d, %Y" }}</span>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
@@ -17,7 +17,6 @@ layout: default
     </li>
     {% endfor %}
   </ul>
-
   <p class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>

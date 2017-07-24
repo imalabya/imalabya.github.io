@@ -83,3 +83,9 @@
 .zero-pad-bottom{
   padding-bottom: 0;
 }
+
+.hide-small{
+  @media screen and ($bp-smaller-than-phablet){
+    display: none !important;
+  }
+}

@@ -31,6 +31,16 @@ disqus:
   shortname: imalabya
 google_analytics: UA-77169671-1
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path
+
 # Build settings
 markdown: kramdown
 theme: minima
+highlighter: rouge
+permalink: pretty
+paginate: 10
+
+gems: [jekyll-paginate, jekyll-feed, jekyll-sitemap, rouge]

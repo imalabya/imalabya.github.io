@@ -1,4 +1,5 @@
-if ( window.location.pathname == '/' ){
+//Particle Hero on homepage
+if ( window.location.pathname == '/' ) {
   var canvasDiv = document.getElementById('hero-canvas');
   var options = {
     particleColor: '#fff',
@@ -9,53 +10,38 @@ if ( window.location.pathname == '/' ){
   };
   var particleCanvas = new ParticleNetwork(canvasDiv, options);
 }
-window.onscroll = function(ev) {
-  if (document.body.scrollTop == 0) {
-    $('header').addClass('nav-top');
-  }
-  else{
-    $('header').removeClass('nav-top');
-  }
-};
 
-// Hide Header on on scroll down
-var didScroll;
-var lastScrollTop = 0;
-var delta = 5;
-var navbarHeight = $('header').outerHeight();
-
-$(window).scroll(function(event){
-  didScroll = true;
+// Site header slide-in effect
+$(document).ready(function($) {
+  var MQL = 960;
+  console.log(MQL);
+  console.log($(window).width());
+  //primary navigation slide-in effect
+  if ($(window).width() > MQL) {
+    var headerHeight = $('.site-header').height();
+    console.log(headerHeight);
+    $(window).on('scroll', {
+      previousTop: 0
+    },
+    function() {
+      var currentTop = $(window).scrollTop();
+      //check if user is scrolling up
+      if (currentTop < this.previousTop) {
+        //if scrolling up...
+        if (currentTop > 0 && $('.site-header').hasClass('is-fixed')) {
+          $('.site-header').addClass('is-visible');
+        } else {
+          $('.site-header').removeClass('is-visible is-fixed');
+        }
+      } else {
+        //if scrolling down...
+        $('.site-header').removeClass('is-visible');
+        if (currentTop > headerHeight && !$('.site-header').hasClass('is-fixed')) $('.site-header').addClass('is-fixed');
+      }
+      this.previousTop = currentTop;
+    });
+  }
 });
-
-setInterval(function() {
-  if (didScroll) {
-    hasScrolled();
-    didScroll = false;
-  }
-}, 0);
-
-function hasScrolled() {
-  var st = $(this).scrollTop();
-
-  // Make sure they scroll more than delta
-  if(Math.abs(lastScrollTop - st) <= delta)
-  return;
-
-  // If they scrolled down and are past the navbar, add class .nav-up.
-  // This is necessary so you never see what is "behind" the navbar.
-  if (st > lastScrollTop && st > navbarHeight){
-    // Scroll Down
-    $('header').removeClass('nav-down').addClass('nav-up');
-  } else {
-    // Scroll Up
-    if(st + $(window).height() < $(document).height()) {
-      $('header').removeClass('nav-up').addClass('nav-down');
-    }
-  }
-
-  lastScrollTop = st;
-}
 
 
 // Load Disqus on demand.
@@ -75,6 +61,17 @@ $(document).ready(function() {
   });
 });
 
+// Fadein effect for posts
 $(document).ready(function() {
   $('.page-type-post').hide(0).delay(250).fadeIn(1000);
+});
+
+// Push menu for the navigation
+$(document).ready(function(){
+  $('.hamburger').click(function(){
+    $(this).toggleClass('is-active');
+    $('.push-menu').toggleClass('show-menu');
+    $('.site-header').toggleClass('menu-open');
+    $('body').toggleClass('no-overflow');
+  })
 });

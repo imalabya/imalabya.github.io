@@ -5,23 +5,66 @@
     {% assign page_paths = site.header_pages | default: default_paths %}
     <a class="site-title" href="{{ "/" | relative_url }}">Malabya <span>Tewari</span></a>
 
-    {% if page_paths %}
-    <nav class="site-nav">
-      <ul class="menu">
-        <li class="menu-item {% if page.url == '/' %}active{% endif %}">
-          <a href="/" class="page-link" aria-label='Homepage'>Home</a>
-        </li>
-        <li class="menu-item {% if page.url == '/about/' %}active{% endif %}">
-          <a href="/about" class="page-link" aria-label='About Me'>About</a>
-        </li>
-        <li class="menu-item {% if page.url == '/work/' %}active{% endif %}">
-          <a href="/work" class="page-link" aria-label='My Work'>Work</a>
-        </li>
-        <li class="menu-item {% if page.url == '/contact/' %}active{% endif %}">
-          <a href="/contact" class="page-link" aria-label='Contact Me'>Contact</a>
-        </li>
-      </ul>
-    </nav>
-    {% endif %}
+    <div class="site--menu">
+      <div class="humburger-menu">
+        <span class="text-menu hide-small">Menu</span>
+        <button class="hamburger hamburger--spin" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="push-menu">
+        <div class="pm-overlay"></div>
+        <div class="pw-wrapper">
+          <div class="pm-quote hide-small">
+            <blockquote cite="https://fortrabbit.github.io/quotes/">
+                <span class="pm-quote-first">Always code as if the guy</span>
+              <br>
+                <span class="pm-quote-second">who ends up maintaining your code</span>
+              <br>
+              <span class='pm-quote-third'>will be a violent psychopath</span>
+                <br>
+                <span class="pm-quote-las">who knows where you live.</span>
+            </blockquote>
+            <cite>Martin Golding</cite>
+          </div>
+          <div class="pm-container">
+            <div class="pw-wrap">
+              <nav class="site-nav">
+                <ul class="menu">
+                  <li class="menu-item {% if page.url == '/' %}active{% endif %}">
+                    <a href="/" class="page-link" aria-label='Homepage'>
+                      <span data-hover='Home'>Home</span>
+                    </a>
+                  </li>
+                  <li class="menu-item {% if page.url == '/about/' %}active{% endif %}">
+                    <a href="/posts" class="page-link" aria-label='About Me'>
+                      <span data-hover='Posts'>Posts</span>
+                    </a>
+                  </li>
+                  <li class="menu-item {% if page.url == '/about/' %}active{% endif %}">
+                    <a href="/about" class="page-link" aria-label='About Me'>
+                      <span data-hover='About'>About</span>
+                    </a>
+                  </li>
+                  <li class="menu-item {% if page.url == '/work/' %}active{% endif %}">
+                    <a href="/work" class="page-link" aria-label='My Work'>
+                      <span data-hover='Work'>Work</span>
+                    </a>
+                  </li>
+                  <li class="menu-item {% if page.url == '/contact/' %}active{% endif %}">
+                    <a href="/contact" class="page-link" aria-label='Contact Me'>
+                      <span data-hover='Contact'>Contact</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

@@ -26,7 +26,6 @@
   .post-content{
     font-size: 1.25rem;
     line-height: 1.75;
-    border-bottom: 1px dotted $light-grey;
     p, .highlight {
       margin-bottom: 1.5rem;
     }
@@ -49,11 +48,14 @@
     margin-bottom: 2rem;
     > div{
       margin-bottom: 1rem;
-      overflow: auto;
+      display: inline-block;
     }
     .tags{
       float: left;
       width: 70%;
+      > .tag{
+        margin-right: 1rem;
+      }
     }
     .share{
       float: right;
@@ -72,14 +74,18 @@
 }
 
 .PageNavigation{
-  margin-top: 1rem;
+  margin: 0 !important;
   width: 100%;
   .pager{
     float: left;
-    width: 50%;
+    width: 49.93%;
+    padding: 1rem 0;
+    border-top: 1px solid $whisper;
+    border-bottom: 1px solid $whisper;
   }
   .prev{
     text-align: left;
+    border-right: 1px solid $whisper;
     span{
       display: inline-block;
       margin-right: .5rem;
@@ -95,5 +101,17 @@
   }
   .next{
     text-align: right;
+    span{
+      display: inline-block;
+      margin-left: .5rem;
+      top: -.0625em;
+      transform: translate3d(0,0,0);
+      transition: transform .15s ease;
+    }
+    &:hover{
+      span{
+        transform: translate3d(.5em,0,0);
+      }
+    }
   }
 }

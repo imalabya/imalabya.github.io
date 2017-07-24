@@ -4,7 +4,7 @@
   .post-title{
     margin-bottom: .5rem;
     line-height: 1;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     letter-spacing: normal;
     font-family: $azosans-regular;
     font-weight: 600;
@@ -24,9 +24,9 @@
   background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500188230/universe_soujvz.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
-  -webkit-box-shadow: $charcoal 0 .5rem 4rem;
-  -mox-box-shadown: $charcoal 0 .5rem 4rem;
-  box-shadow: $charcoal 0 .5rem 4rem;
+  -webkit-box-shadow: $light-grey 0 .25rem 1rem;
+  -mox-box-shadown: $light-grey 0 .25rem 1rem;
+  box-shadow: $light-grey 0 .25rem 1rem;
   margin-bottom: 2rem;
   &:after{
     content: '';
@@ -61,6 +61,7 @@
   .ilogo{
     border: .25rem solid $whisper;
     border-radius: 50%;
+    margin-bottom: 2rem;
   }
 }
 
