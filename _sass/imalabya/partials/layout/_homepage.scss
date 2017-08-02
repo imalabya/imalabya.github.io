@@ -18,50 +18,58 @@
   }
 }
 
-.hero-banner{
-  text-align: center;
-  min-height: 35rem;
-  background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500188230/universe_soujvz.jpg') no-repeat center center;
-  background-size: cover;
+.hero-banner {
+  background: #e53935;  /* fallback for old browsers */  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(left, #e35d5b, #e53935);
+  background: -o-linear-gradient(left, #e35d5b, #e53935);
+  background: linear-gradient(to right, #e35d5b, #e53935); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  min-height: 30rem;
+  box-shadow: 0 0 10px #000;
   position: relative;
-  -webkit-box-shadow: $light-grey 0 .25rem 1rem;
-  -mox-box-shadown: $light-grey 0 .25rem 1rem;
-  box-shadow: $light-grey 0 .25rem 1rem;
-  margin-bottom: 2rem;
-  &:after{
-    content: '';
+  .hero-text{
     position: absolute;
-    width: 100%;
-    left: 0;
-    top: 0
-  }
-  @media screen and ($bp-smaller-than-tablet){
-    min-height: 25rem;
-  }
-}
-
-.hero-text{
-  padding: 8.5rem 10.5rem;
-  color: #fff;
-  font-size: 200%;
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  text-align: center;
-  span{
-    border-bottom: 3px solid $link-color-hover;
-  }
-  @media screen and ($bp-smaller-than-tablet){
-    padding: 8.5rem .5rem;
+    z-index: 100;
+    color: #fff;
+    left: 50%;
+    top: 50%;
     font-size: 120%;
+    transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    img, .rotate-text{
+      display: inline-block;
+      vertical-align: top
+    }
+    .rotate-text{
+      min-width: rem(310);
+    }
+    img{
+      margin-right: 1.5rem;
+      border-radius: 50%;
+      border: 10px solid #eee;
+    }
   }
-  h1{
-    display: none;
+  .hero-title{
+    font-family: $azosans-bold;
+    .underline{
+      border-bottom: 2px solid $link-color-hover;
+    }
+    .light{
+      font-family: $azosans-light;
+    }
   }
-  .ilogo{
-    border: .25rem solid $whisper;
-    border-radius: 50%;
-    margin-bottom: 2rem;
+  .rotate{
+    display: block;
+    width: 100%;
+    min-height: 2rem;
+    margin-bottom: 1rem;
+  }
+  .button{
+    display: inline-block;
+    color: #fff;
+    border: 1px solid $white;
+    padding: .5rem 1rem;
   }
 }
 

@@ -3,7 +3,7 @@
   <div class="expanded-wrapper">
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
-    <a class="site-title" href="{{ "/" | relative_url }}">Malabya <span>Tewari</span></a>
+    <a class="site-title" href="{{ "/" | relative_url }}"><img src="/logo.svg" alt=""></a>
 
     <div class="site--menu">
       <div class="humburger-menu">
@@ -49,11 +49,11 @@
                       <span data-hover='About'>About</span>
                     </a>
                   </li>
-                  <li class="menu-item {% if page.url == '/work/' %}active{% endif %}">
+                  <!-- <li class="menu-item {% if page.url == '/work/' %}active{% endif %}">
                     <a href="/work" class="page-link" aria-label='My Work'>
                       <span data-hover='Work'>Work</span>
                     </a>
-                  </li>
+                  </li> -->
                   <li class="menu-item {% if page.url == '/contact/' %}active{% endif %}">
                     <a href="/contact" class="page-link" aria-label='Contact Me'>
                       <span data-hover='Contact'>Contact</span>
