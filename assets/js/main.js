@@ -1,21 +1,3 @@
-//Particle Hero on homepage
-if ( window.location.pathname == '/' ) {
-  var canvasDiv = document.getElementById('hero-canvas');
-  var options = {
-    particleColor: '#fff',
-    interactive: true,
-    background: 'http://res.cloudinary.com/imalabya-media/image/upload/v1500188230/universe_soujvz.jpg',
-    speed: 'slow',
-    density: 'medium'
-  };
-  var particleCanvas = new ParticleNetwork(canvasDiv, options);
-  $(".rotate").textrotator({
-    animation: "flipUp", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-    separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-    speed: 5000 // How many milliseconds until the next word show.
-  });
-}
-
 // Site header slide-in effect
 $(document).ready(function($) {
   var MQL = 960;
