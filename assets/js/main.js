@@ -19,12 +19,9 @@ if ( window.location.pathname == '/' ) {
 // Site header slide-in effect
 $(document).ready(function($) {
   var MQL = 960;
-  console.log(MQL);
-  console.log($(window).width());
   //primary navigation slide-in effect
   if ($(window).width() > MQL) {
     var headerHeight = $('.site-header').height();
-    console.log(headerHeight);
     $(window).on('scroll', {
       previousTop: 0
     },

@@ -66,13 +66,17 @@ pre{
 	}
 }
 
-code{
+code {
+	display: block;
 	background: transparent;
-  color: $whisper;
+	color: $whisper;
+	max-width: 740px;
+	margin: auto;
 }
 
 p{
 	code{
+		display: inline;
 		color: $link-color-hover;
 		border: none;
 		font-size: 100%;
