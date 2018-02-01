@@ -5,41 +5,11 @@
 
   <title>{% if page.title %}{{ page.title | escape }} &mdash; {{ site.title | escape }} {% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" defer></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="/logo_h0w_icon.ico">
+  <link rel="stylesheet" href="{{ "/assets/stylesheet/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  <script>
-    /*!
-    Modified for brevity from https://github.com/filamentgroup/loadCSS
-    loadCSS: load a CSS file asynchronously.
-    [c]2014 @scottjehl, Filament Group, Inc.
-    Licensed MIT
-    */
-    function loadCSS(href){
-      var ss = window.document.createElement('link'),
-          ref = window.document.getElementsByTagName('head')[0];
-
-      ss.rel = 'stylesheet';
-      ss.href = href;
-
-      // temporarily, set media to something non-matching to ensure it'll
-      // fetch without blocking render
-      ss.media = 'only x';
-
-      ref.parentNode.insertBefore(ss, ref);
-
-      setTimeout( function(){
-        // set media back to `all` so that the stylesheet applies once it loads
-        ss.media = 'all';
-      },0);
-    }
-    loadCSS('{{ "/assets/stylesheet/main.css" | relative_url }}');
-  </script>
-  <noscript>
-    <!-- Let's not assume anything -->
-    <link rel="stylesheet" href="{{ "/assets/stylesheet/main.css" | relative_url }}">
-  </noscript>
   <!-- External scripts -->
   {% include google-analytics.html %}
 </head>
