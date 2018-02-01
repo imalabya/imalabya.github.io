@@ -21,34 +21,6 @@
   </div>
 </footer>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script>
-    /*!
-    Modified for brevity from https://github.com/filamentgroup/loadCSS
-    loadCSS: load a CSS file asynchronously.
-    [c]2014 @scottjehl, Filament Group, Inc.
-    Licensed MIT
-    */
-    function loadCSS(href){
-      var ss = window.document.createElement('link'),
-          ref = window.document.getElementsByTagName('head')[0];
-
-      ss.rel = 'stylesheet';
-      ss.href = href;
-      ss.media = 'only x';
-
-      ref.parentNode.insertBefore(ss, ref);
-
-      setTimeout( function(){
-        ss.media = 'all';
-      },0);
-    }
-    loadCSS('{{ "/assets/stylesheet/main.css" | relative_url }}');
-  </script>
-  <noscript>
-    <!-- Let's not assume anything -->
-    <link rel="stylesheet" href="{{ "/assets/stylesheet/main.css" | relative_url }}">
-  </noscript>
-
 <link href="https://fonts.googleapis.com/css?family=Lora:400i" rel="stylesheet">
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-57251a056347c57d" async defer></script>
 <script type="text/javascript" src="{{ '/assets/js/pace.min.js' }}" async defer></script>
