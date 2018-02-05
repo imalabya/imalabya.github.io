@@ -4,6 +4,7 @@ title:      "Set an authentication password in XAMPP"
 subtitle:   "The basic http authentication created with <kbd>.htaccess</kbd> and <kbd>.htpasswd</kbd> files works pretty well on online real server. How about trying it out in XAMPP"
 date:       2014-09-21 12:00:00
 tags:       localhost security windows xampp
+category:   Devops
 ---
 The basic http authentication created with <kbd>.htaccess</kbd> and <kbd>.htpasswd</kbd> files works pretty well on online real server. However implementing them locally on our Xampp server (on Windows) may be a little problematic. As I already said authentication requires two files viz <kbd>.htaccess</kbd> and <kbd>.htpasswd</kbd> ,but Drupal provides a <kbd>.htaccess</kbd> file while installation. So no problem in that. All we need to do is create the <kbd>.htpasswd</kbd> file and we are done. We will create the <kbd>.htpasswd</kbd> file with the help of <kbd>.htpasswd</kbd> command. The corresponding windows executable file <kbd>.htpasswd</kbd>.exe resides in xampp\apache\bin folder. Using the command prompt in Windows type in the following line. N.B Better if you pwd in the Drupal installation directory.
 

@@ -4,6 +4,7 @@ title:      "Redirect using Drupal Events"
 subtitle:   "Use Events subscriber like goto to set a global redirect for pages."
 date:       2016-11-25 12:00:00
 tags:       drupalplanet eventsubscriber api
+category:   Drupal
 ---
 
 Event Subscribers in Drupal 8 is great, which allow various system components to interact and communicate with one another while remaining independent, or decoupled. Drupal core dispatches many events on every request while other components can subscribe to these dispatched events.

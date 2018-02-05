@@ -6,8 +6,10 @@ layout: default
   <h2 class="line-heading">Recent Blogs</h2>
   <ul class="post-list">
     {% for post in paginator.posts %}
-    <li class="post-item mv3 pad3 zero-margin-top zero-pad-top">
-      <span class="post-meta">Posted on {{ post.date | date: "%b %-d, %Y" }}</span>
+    <li class="post-item mv4 pad4 zero-margin-top zero-pad-top">
+      <span class="post-meta">
+        Posted on <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y" }}</time> under {{post.category}}
+      </span>
       <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
           {{ post.title | escape }}

@@ -3,7 +3,8 @@ layout:     post
 title:      "How to create Virtual Host in Nginx 1.9+"
 subtitle:   "Run multiple websites or domains off a single system or system powered by Nginx 1.9."
 date:       2016-08-07 12:00:00
-tags:       Nginx Devops
+tags:       nginx devops
+category:   Devops
 ---
 Nginx has grown in popularity since its release due to its light-weight resource utilization and its ability to scale easily on minimal hardware. Nginx excels at serving static content quickly and is designed to pass dynamic requests off to other software that is better suited for those purposes. Nginx is often selected by administrators for its resource efficiency and responsiveness under load.
 

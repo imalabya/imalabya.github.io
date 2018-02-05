@@ -11,16 +11,6 @@
       font-size: 3.75rem;
       font-family: $azosans-regular;
       position: relative;
-      &:before{
-        content: '';
-        position: absolute;
-        height: 2px;
-        background: $link-color-hover;
-        width: 1200%;
-        right: 95%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
     }
   }
   .post-content{

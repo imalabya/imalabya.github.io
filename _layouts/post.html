@@ -18,11 +18,11 @@ layout: default
     </div>
 
     <div class="post-content-bottom mv3">
-      <div class="tags">
+      <ul class="tags">
         {% for tag in page.tags %}
-        <span class="tag"><a href="/tags#{{ tag }}" class="tag">#{{ tag }}</a></span>
+        <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
         {% endfor %}
-      </div>
+      </ul>
       <div class="share left">
         <div class="addthis_sharing_toolbox"></div>
       </div>

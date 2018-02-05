@@ -4,6 +4,7 @@ title:      "Connecting to a Microsoft SQL Server Database from PHP in Ubuntu"
 subtitle:   "A tutorial to let your Ubuntu retrieve data from a Microsoft Database."
 date:       2014-11-24 12:00:00
 tags:       localhost mssql ubuntu
+category:   Devops
 ---
 
 To use the MSSQL extension on Unix/Linux, you first need to build and install the FreeTDS library.

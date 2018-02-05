@@ -4,6 +4,7 @@
   }
   h1{
     position: relative;
+    margin-bottom: 1.5rem;
     &:before{
       content: '';
       position: absolute;
@@ -50,4 +51,9 @@
       line-height: 1.5;
     }
   }
+}
+
+#work-experience {
+  margin-top: 5rem;
+  margin-bottom: 1.5rem;
 }

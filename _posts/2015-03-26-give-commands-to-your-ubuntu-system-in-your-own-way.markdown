@@ -4,6 +4,7 @@ title:      "Give commands to your Ubuntu system in your own way."
 subtitle:   "Control you Ubuntu environment with your own custom commands and be the master of your system."
 date:       2015-03-26 12:00:00
 tags:       ubuntu
+category:   Devops
 ---
 
 Ubuntu is great for someone who wants to control his system like the way he wants. But that requires someone like Yoda to master it. Though there are some things which can be done easily. One of such things is the commands that we use in Terminal.

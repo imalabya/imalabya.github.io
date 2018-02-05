@@ -4,6 +4,7 @@ title:      "Access object properties via variable"
 subtitle:   "After struggling  for hours today I learnt how PHP works to access object using variable. Silly stuff."
 date:       2015-04-10 12:00:00
 tags:       drupalplanet drupal7 php
+category:   Drupal
 ---
 
 Have been struggling a lot since morning doing a simple stuff. Goal was to create a node object by adding the node field object properties dynamically. Everything looked fine but it was not working. After nearly burning around 4 hours I finally got the mistake and seriously makes me feel like a noob😦
