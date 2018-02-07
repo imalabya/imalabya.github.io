@@ -35,20 +35,26 @@
   }
 
   .post-content-bottom{
-    margin-bottom: 2rem;
-    > div{
-      margin-bottom: 1rem;
-      display: inline-block;
+    margin-bottom: 5rem;
+    overflow: hidden;
+    @media screen and (min-width: 426px) {
+      display: flex;
     }
     .tags{
-      float: left;
-      width: 70%;
+      @media screen and (min-width: 426px) {
+        width: 74%;
+        margin-bottom: 0;
+      }
+      margin-bottom: 2rem;
       > .tag{
         margin-right: 1rem;
       }
     }
-    .share{
-      float: right;
+    .share {
+      .addthis_sharing_toolbox {
+        display: inline-block;
+        vertical-align: middle;
+      }
     }
   }
 }
@@ -64,17 +70,16 @@
 }
 
 .PageNavigation{
-  margin: 0 !important;
+  margin-bottom: 4rem;
   width: 100%;
+  display: flex;
   .pager{
-    float: left;
-    width: 49.93%;
+    width: 50%;
     padding: 1rem 0;
     border-top: 1px solid $whisper;
     border-bottom: 1px solid $whisper;
   }
   .prev{
-    text-align: left;
     border-right: 1px solid $whisper;
     span{
       display: inline-block;

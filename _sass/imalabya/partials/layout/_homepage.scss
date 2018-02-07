@@ -2,7 +2,7 @@
 .post-item{
   border-bottom: 1px solid $whisper;
   .post-title{
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
     line-height: 1;
     font-size: 1.5rem;
     letter-spacing: normal;
@@ -15,6 +15,8 @@
   }
   .post-meta{
     font-family: $lora;
+    display: block;
+    margin-bottom: 1rem;
   }
 }
 

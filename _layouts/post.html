@@ -1,14 +1,14 @@
----
+--- 
 layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <p class="post-meta">
+    <p class="post-meta mv5 zero-margin-top">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {% assign date_format = site.minima.date_format | default: "%B %d, %Y" %}
-        {{ page.date | date: date_format }}
+        {% assign date_format = site.minima.date_format | default: "%B %d, %Y" %} {{ page.date | date: date_format }}
       </time>
+      under {{ page.category }}
     </p>
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
@@ -17,23 +17,28 @@ layout: default
       {{ content }}
     </div>
 
-    <div class="post-content-bottom mv3">
+    <div class="post-content-bottom mv5">
       <ul class="tags">
         {% for tag in page.tags %}
-        <li><a href="/tags#{{ tag }}" class="tag">{{ tag }}</a></li>
+        <li>
+          <a href="/tags#{{ tag }}" class="tag">{{ tag }}</a>
+        </li>
         {% endfor %}
       </ul>
       <div class="share left">
-        <div class="addthis_sharing_toolbox"></div>
+        <span>Share this:</span> <div class="addthis_sharing_toolbox"></div>
       </div>
-      <div class="PageNavigation">
-        {% if page.previous.url %}
-        <a class="prev pager" href="{{page.previous.url}}"><span>&larr;</span>Previous</a>
-        {% endif %}
-        {% if page.next.url %}
-        <a class="next pager" href="{{page.next.url}}">Next<span>&rarr;</span></a>
-        {% endif %}
-      </div>
+    </div>
+    <div class="PageNavigation">
+      {% if page.previous.url %}
+      <a class="prev pager" href="{{page.previous.url}}">
+        <span>&larr;</span>Previous</a>
+      {% endif %} {% if page.next.url %}
+      <a class="next pager" href="{{page.next.url}}">Next
+        <span>&rarr;</span>
+      </a>
+      {% endif %}
+
     </div>
 
     {% if site.disqus.shortname %}
