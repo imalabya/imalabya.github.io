@@ -1,11 +1,12 @@
 ---
-layout:     post
-title:      "Install Drush for all users"
-subtitle:   "Let all users in the system enjoy the power of Drush"
-date:       2017-07-08 12:00:00
-tags:       drupal drush
-category:   Drupal
+title: Install Drush for all users
+layout: post
+subtitle: Let all users in the system enjoy the power of Drush
+date: '2017-07-08 17:30:00 +0530'
+tags: drupal drush
+category: Drupal
 ---
+
 Usually I install [Drush using Composer](http://whaaat.com/installing-drush-9-using-composer) but the problem it need to be installed per user. Recently I came across a situation while configuring Jenkins that the `jenkins` user should also have access to Drush to run the build. So, instead of installing it again for `jenkins` I was looking for a solution where all the users in the system can have the benfits of Drush. Still, Composer is the best way to do it with some minor tweaks.
 
 First, install Composer globally:
@@ -27,5 +28,7 @@ git checkout 8.x  #or whatever version you want.
 ln -s /usr/local/src/drush/drush /usr/bin/drush
 composer install
 {% endhighlight %}
+
+# This is a title
 
 Now when you do `drush --version` you will get the Latest Drush version which is same for all the users in the system.
