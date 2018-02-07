@@ -3,7 +3,7 @@ layout:     post
 title:      "How to Trim texts in Twig - Drupal 8"
 subtitle:   "Trim down text field with rich texts in Drupal 8 twig."
 date:       2016-09-20 12:00:00
-tags:       drupalplanet drupal8 twig theme
+tags:       drupal twig theme
 category:   Drupal
 ---
 In Twig templating, text can be trimmed down using the <kbd>slice</kbd> filter.

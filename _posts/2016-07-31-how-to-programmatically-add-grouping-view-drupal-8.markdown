@@ -3,7 +3,7 @@ layout:     post
 title:      "How to Programmatically Add Grouping in Views in Drupal 8"
 subtitle:   "Add grouping to views based on conditions or whenever you need via code."
 date:       2016-07-31 12:00:00
-tags:       drupalplanet drupal8 views snippet
+tags:       drupal views snippet
 category:   Drupal
 ---
 

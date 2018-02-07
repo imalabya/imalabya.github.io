@@ -4,7 +4,7 @@ layout: post
 subtitle: Things are not always what they seem; the first appearance deceives many;
   the intelligence of a few perceives what has been carefully hidden.
 date: '2018-02-07 12:00:00'
-tags: drupal, views
+tags: drupal views
 category: Drupal
 ---
 

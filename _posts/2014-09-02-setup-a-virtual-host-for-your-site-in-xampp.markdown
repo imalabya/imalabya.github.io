@@ -3,7 +3,7 @@ layout:     post
 title:      "Setup a Virtual Host for Your site in XAMPP"
 subtitle:   "What if I tell you you that you can run multiple domains in your local machine and each one of them is separated from each other? Yes, this can be achieve using Virtual Hosts"
 date:       2014-09-02 12:00:00
-tags:       drupal virtualhosts windows xampp
+tags:       virtualhosts xampp
 category:   Devops
 ---
 In my <a href="/2014/09/01/there-is-no-place-like-127-0-0-1/">previous blog</a> I explained how you can setup a Drupal site in you local environment using XAMPP. As I already mentioned there that it is great to run a website in a local machine  using http://localhost but it have a drawback. By default you have a single domain and you have to pull all your work under the same domain in different directories. This isn’t very real and can cause problem while using server side includes and root relative links. But there is always a solution to every problem.

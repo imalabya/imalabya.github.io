@@ -3,7 +3,7 @@ layout:     post
 title:      "Redirect using Drupal Events"
 subtitle:   "Use Events subscriber like goto to set a global redirect for pages."
 date:       2016-11-25 12:00:00
-tags:       drupalplanet eventsubscriber api
+tags:       eventsubscriber snippet drupal
 category:   Drupal
 ---
 

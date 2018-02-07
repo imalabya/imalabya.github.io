@@ -3,7 +3,7 @@ layout:     post
 title:      "Access object properties via variable"
 subtitle:   "After struggling  for hours today I learnt how PHP works to access object using variable. Silly stuff."
 date:       2015-04-10 12:00:00
-tags:       drupalplanet drupal7 php
+tags:       drupal php snippet
 category:   Drupal
 ---
 

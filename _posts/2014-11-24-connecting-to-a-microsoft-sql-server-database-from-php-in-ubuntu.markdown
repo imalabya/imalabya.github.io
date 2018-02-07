@@ -3,7 +3,7 @@ layout:     post
 title:      "Connecting to a Microsoft SQL Server Database from PHP in Ubuntu"
 subtitle:   "A tutorial to let your Ubuntu retrieve data from a Microsoft Database."
 date:       2014-11-24 12:00:00
-tags:       localhost mssql ubuntu
+tags:       mssql ubuntu
 category:   Devops
 ---
 
