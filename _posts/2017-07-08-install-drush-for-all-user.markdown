@@ -29,6 +29,5 @@ ln -s /usr/local/src/drush/drush /usr/bin/drush
 composer install
 {% endhighlight %}
 
-# This is a title
 
 Now when you do `drush --version` you will get the Latest Drush version which is same for all the users in the system.
