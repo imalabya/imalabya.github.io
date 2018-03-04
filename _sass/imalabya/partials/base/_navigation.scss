@@ -1,5 +1,6 @@
 .hamburger {
   padding: 1rem;
+  width: auto;
   display: inline-block;
   cursor: pointer;
   transition-property: opacity, filter;
@@ -32,11 +33,11 @@
 }
 
 .hamburger-inner::before{
-  width: 28px !important;
+  width: 1.5rem !important;
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 40px;
+  width: 2rem;
   height: 2px;
   background-color: #fff;
   border-radius: 4px;

@@ -3,13 +3,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }} &mdash; {{ site.title | escape }} {% else %}{{ site.title | escape }}{% endif %}</title>
+  <title>
+    {% if page.title %}{{ page.title | escape }}
+      &mdash;
+      {{ site.title | escape }}
+    {% else %}{{ site.title | escape }}
+    {% endif %}
+  </title>
   <meta name="description" content="{{ page.subtitle | default: site.description | strip_html | normalize_whitespace | escape }}">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer></script>
+
+  <!-- Google Authorship Markup -->
+  <link rel="author" href="https://plus.google.com/+{{site.gplus_username}}?rel=author">
+
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@{{site.twitter_username}}">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="twitter:image:src" content="http://res.cloudinary.com/imalabya-media/image/upload/v1520188666/andrew-neel-308138-unsplash_awlidk.jpg"/>
+
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:image" content="{{ site.url }}{{page.image }}">
+  <meta property="og:image" content="http://res.cloudinary.com/imalabya-media/image/upload/v1520188666/andrew-neel-308138-unsplash_awlidk.jpg">
+  <meta property="og:description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}"/>
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="article:author" content="http://facebook.com/{{ site.facebook_username }}"/>
+  <meta property="article:publisher" content="https://www.facebook.com/{{ site.facebook_username }}"/>
+
+  <!-- Social: Google+ / Schema.org -->
+  <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}"/>
+  <meta itemprop="description" content="{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <meta itemprop="image" content="http://res.cloudinary.com/imalabya-media/image/upload/v1520188666/andrew-neel-308138-unsplash_awlidk.jpg"/>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous" defer="defer"></script>
   <link rel="icon" type="image/png" href="/favicon.ico">
-  <link rel="stylesheet" href="{{ "/assets/stylesheet/main.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ " /assets/stylesheet/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ " /feed.xml" | relative_url }}">
   <!-- External scripts -->
   {% include google-analytics.html %}
 </head>
