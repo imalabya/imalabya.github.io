@@ -1,0 +1,27 @@
+.form-element {
+  margin: 2rem 0;
+  position: relative;
+  label {
+    display: block;
+    opacity: .5;
+    font-size: 1rem;
+  }
+  input, textarea {
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-family: 'AzoSans-Light', sans-serif;
+  }
+}
+
+input[type='submit'] {
+  background: $asphalt;
+  color: $white;
+  width: 10rem;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+}

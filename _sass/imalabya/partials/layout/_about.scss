@@ -1,59 +1,88 @@
 .path-about-me{
-  .post-header{
-    display: none;
-  }
-  h1{
-    position: relative;
-    margin-bottom: 1.5rem;
-    &:before{
-      content: '';
-      position: absolute;
-      height: 2px;
-      background: $link-color-hover;
-      width: 1200%;
-      right: 102%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+  img {
+    max-width: 100%;
+    border: none;
+    margin: 0;
+    box-shadow: none;
   }
   .book{
-    float: right;
-  }
-  .company-logo{
-    border: 1px solid $whisper;
-    padding: .5rem;
-    float: right;
-  }
-  .role{
-    display: block;
-    text-transform: uppercase;
-    font-size: 80%;
-    font-family: $azosans-bold;
-    color: $link-color-hover;
-  }
-  .past-exp{
-    float: left;
-    width: 30%;
-    margin-right: 1rem;
-    margin-top: 1rem;
-    font-size: 90%;
-    img{
-      float: left;
-      margin-right: 1rem;
+    @media screen and (min-width:430px) {
+      display: flex;
     }
-    .role{
-      color: $eclipse;
+    margin-bottom: 4rem;
+    .intro {
+      margin-right: 5rem;
+      width: 70%;
     }
-    .duration{
-      float: left;
-      width: 55%;
-      font-size: 60%;
-      line-height: 1.5;
+    a {
+      box-shadow: none;
+      &:hover {
+        box-shadow: none;
+      }
+    }
+    img {
+      max-width: auto;
+      margin: 0;
+      border: none;
     }
   }
-}
-
-#work-experience {
-  margin-top: 5rem;
-  margin-bottom: 1.5rem;
+  .work {
+    @media screen and (min-width: 430px){
+      display: flex;
+      flex-direction: row;
+    }
+    display: flex;
+    flex-direction: column-reverse;
+    &.present{
+      margin-bottom: 0;
+      .desc {
+        @media screen and (min-width:460px){
+          margin-top: 0;
+          margin-right: 3rem;
+          width: 63%;
+        }
+        margin-top: 2rem;
+      }
+      .role {
+        color: #D91E18;
+      }
+    }
+    .role {
+      display: block;
+      text-transform: uppercase;
+      font-size: 80%;
+      font-family: "AzoSans-Bold", sans-serif;
+    }
+  }
+  .past-exp {
+    @media screen and (min-width:460px){
+      display: flex;
+      .work {
+        width: 33.33%;
+        margin-right: 1rem;
+        border: none !important;
+        margin-top: 0 !important;
+        padding: 0;
+      } 
+    }
+    .work {
+      display: block;
+      padding-top: 1rem;
+      margin-top: 2rem;
+      border-top: 1px solid #ccc;
+      .company-logo {
+        float: left;
+        margin-right: .75rem;
+      }
+      .desc {
+        overflow: hidden;
+      }
+      .duration {
+        display: block;
+        font-size: 75%;
+        line-height: 1.2;
+        margin-top: .5rem;
+      }
+    }
+  }
 }

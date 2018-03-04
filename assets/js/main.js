@@ -6,8 +6,8 @@ window.onload = function () {
     if ($(window).width() > MQL) {
       var headerHeight = $('.site-header').height();
       $(window).on('scroll', {
-        previousTop: 0
-      },
+          previousTop: 0
+        },
         function () {
           var currentTop = $(window).scrollTop();
           //check if user is scrolling up
