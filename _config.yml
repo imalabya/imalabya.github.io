@@ -3,7 +3,8 @@ title: Malabya Tewari - Drupal, Devops & Web.
 email: imalabya@gmail.com
 description: Full Stack Developer & Technical Architect at Valuebound.
 baseurl: ""
-url: "http://imalabya.github.io"
+url: "https://imalabya.com"
+enforce_ssl: imalabya.com
 twitter_username: malavya88
 github_username:  malabya
 gplus_username: imalabya
