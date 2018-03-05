@@ -1,0 +1,95 @@
+#search-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    left: 0;
+    top: -100%;
+    @include transition(.5s, all);
+    &.overlay-open {
+        background: transparentize($color: $white, $amount: .02);
+        top: 0;
+    }
+    #search-container {
+        position: relative;
+        top: 20%;
+        width: 740px;
+        margin: auto;
+        .form-element {
+            input {
+                min-height: 4rem;
+                background: none;
+                font-size: 1.5rem;
+                border-color: $charcoal;
+            }
+        }
+    }
+}
+
+#search-button {
+    cursor: pointer;
+}
+
+.search-overlay-open {
+    overflow: hidden;
+    .text-search,
+    .text-menu {
+        color: $charcoal !important;
+    }
+    .hamburger-inner,
+    .hamburger-inner:before,
+    .hamburger-inner:after {
+        background: $charcoal;
+    }
+    #search {
+        path {
+            fill: $charcoal;
+        }
+    }
+}
+
+#search-container {
+    position: relative;
+    #close-search {
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        width: 2rem;
+        height: 2rem;
+        right: -6rem;
+        top: 2.5rem;
+        background: none;
+        border: none;
+        &:before,
+        &:after {
+            content: '';
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: $charcoal;
+        }
+        &:before {
+            transform: rotate(45deg);
+            top: 2px;
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+#results-container {
+    margin: 0;
+    .search-result {
+        margin-bottom: 1.5rem;
+        font-size: 1.25rem;
+        font-family: "AzoSans-Bold", sans-serif;
+        span {
+          display: block;
+          font-size: .875rem;
+          color: $text-color;
+          font-family: "Lora", serif;
+        }
+    }
+}

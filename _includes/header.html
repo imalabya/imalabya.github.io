@@ -1,11 +1,23 @@
 <header class="site-header" role="banner" id="site-header">
 
   <div class="expanded-wrapper">
-    {% assign default_paths = site.pages | map: "path" %}
+    {% assign default_paths = site.pages | map : "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
-    <a class="site-title" href="{{ "/" | relative_url }}"><img src="/logo.svg" alt=""></a>
+    <a class="site-title" href="{{ " /" | relative_url }}"><img src="/logo.svg" alt=""></a>
 
     <div class="site--menu">
+      <div class="site--search">
+        <div id="search-button">
+          <span class="text-search">Search</span>
+          <svg x="0px" y="0px" width="20px" height="20px" viewbox="0 0 446.25 446.25">
+            <g>
+              <g id="search">
+                <path d="M318.75,280.5h-20.4l-7.649-7.65c25.5-28.05,40.8-66.3,40.8-107.1C331.5,73.95,257.55,0,165.75,0S0,73.95,0,165.75    S73.95,331.5,165.75,331.5c40.8,0,79.05-15.3,107.1-40.8l7.65,7.649v20.4L408,446.25L446.25,408L318.75,280.5z M165.75,280.5    C102,280.5,51,229.5,51,165.75S102,51,165.75,51S280.5,102,280.5,165.75S229.5,280.5,165.75,280.5z"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
       <div class="humburger-menu">
         <span class="text-menu hide-small">Menu</span>
         <button class="hamburger hamburger--spin" type="button">
@@ -20,13 +32,13 @@
         <div class="pw-wrapper">
           <div class="pm-quote hide-small">
             <blockquote cite="https://fortrabbit.github.io/quotes/">
-                <span class="pm-quote-first">Always code as if the guy</span>
+              <span class="pm-quote-first">Always code as if the guy</span>
               <br>
-                <span class="pm-quote-second">who ends up maintaining your code</span>
+              <span class="pm-quote-second">who ends up maintaining your code</span>
               <br>
               <span class='pm-quote-third'>will be a violent psychopath</span>
-                <br>
-                <span class="pm-quote-las">who knows where you live.</span>
+              <br>
+              <span class="pm-quote-las">who knows where you live.</span>
             </blockquote>
             <cite>Martin Golding</cite>
           </div>
@@ -39,21 +51,13 @@
                       <span data-hover='Home'>Home</span>
                     </a>
                   </li>
-                  <!-- <li class="menu-item {% if page.url == '/about/' %}active{% endif %}">
-                    <a href="/posts" class="page-link" aria-label='About Me'>
-                      <span data-hover='Posts'>Posts</span>
-                    </a>
-                  </li> -->
+                  <!-- <li class="menu-item {% if page.url == '/about/' %}active{% endif %}"> <a href="/posts" class="page-link" aria-label='About Me'> <span data-hover='Posts'>Posts</span> </a> </li> -->
                   <li class="menu-item {% if page.url == '/about/' %}active{% endif %}">
                     <a href="/about" class="page-link" aria-label='About Me'>
                       <span data-hover='About'>About</span>
                     </a>
                   </li>
-                  <!-- <li class="menu-item {% if page.url == '/work/' %}active{% endif %}">
-                    <a href="/work" class="page-link" aria-label='My Work'>
-                      <span data-hover='Work'>Work</span>
-                    </a>
-                  </li> -->
+                  <!-- <li class="menu-item {% if page.url == '/work/' %}active{% endif %}"> <a href="/work" class="page-link" aria-label='My Work'> <span data-hover='Work'>Work</span> </a> </li> -->
                   <li class="menu-item {% if page.url == '/contact/' %}active{% endif %}">
                     <a href="/contact" class="page-link" aria-label='Contact Me'>
                       <span data-hover='Contact'>Contact</span>

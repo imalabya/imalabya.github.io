@@ -1,205 +1,211 @@
 /* Deisgn SASS */
 
 body {
-  background: $white;
-  font-family: $azosans-light;
-  font-size: rem(16);
-  line-height: 1.4;
-  &.no-overflow {
-    overflow: hidden !important;
-  }
+    background: $white;
+    font-family: $azosans-light;
+    font-size: rem(16);
+    line-height: 1.4;
+    &.no-overflow {
+        overflow: hidden !important;
+    }
 }
 
 *:focus {
-  outline: none;
+    outline: none;
 }
 
 .page-type-post {
-  .site-header {
-    border-bottom: 1px solid $charcoal;
-    @include box;
-    .site-title,
-    .text-menu {
-      color: $charcoal;
+    .site-header {
+        border-bottom: 1px solid $charcoal;
+        @include box;
+        .site-title,
+        .text-menu,
+        .text-search {
+            color: $charcoal;
+        }
+        .hamburger-inner,
+        .hamburger-inner:before,
+        .hamburger-inner:after {
+            background: $charcoal;
+        }
+        #search {
+            path {
+                fill: $charcoal;
+            }
+        }
     }
-    .hamburger-inner,
-    .hamburger-inner:before,
-    .hamburger-inner:after {
-      background: $charcoal;
+    #page {
+        margin-top: 4rem;
     }
-  }
-  #page {
-    margin-top: 4rem;
-  }
 }
 
 .site-footer {
-  border: none;
-  text-align: center;
-  margin-top: 5rem;
-  .footer-social {
-    a {
-      display: inline-block;
-      width: rem(25);
-      height: rem(25);
-      margin: 0 .5rem;
-      @include transition(.5s, transform);
-      &:hover {
-        transform: rotateY(360deg);
-        -ms-transform: rotateY(360deg);
-        -moz-transform: rotateY(360deg);
-        -webkit-transform: rotateY(360deg);
-        -o-transform: rotateY(360deg);
-        .facebook {
-          background-position: -44px -119px;
-          width: 24px;
-          height: 24px;
+    border: none;
+    text-align: center;
+    margin-top: 5rem;
+    .footer-social {
+        a {
+            display: inline-block;
+            width: rem(25);
+            height: rem(25);
+            margin: 0 .5rem;
+            @include transition(.5s, transform);
+            &:hover {
+                transform: rotateY(360deg);
+                -ms-transform: rotateY(360deg);
+                -moz-transform: rotateY(360deg);
+                -webkit-transform: rotateY(360deg);
+                -o-transform: rotateY(360deg);
+                .facebook {
+                    background-position: -44px -119px;
+                    width: 24px;
+                    height: 24px;
+                }
+                .twitter {
+                    background-position: -44px -255px;
+                    width: 24px;
+                    height: 24px;
+                }
+                .drupal {
+                    background-position: -44px -85px;
+                    width: 24px;
+                    height: 24px;
+                }
+                .linkedin {
+                    background-position: -44px -221px;
+                    width: 24px;
+                    height: 24px;
+                }
+                .github {
+                    background-position: -44px -153px;
+                    width: 24px;
+                    height: 24px;
+                }
+                .instagram {
+                    background-position: -44px -187px;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
         }
-        .twitter {
-          background-position: -44px -255px;
-          width: 24px;
-          height: 24px;
+        .social-link {
+            display: inline-block;
+            width: rem(25);
+            height: rem(25);
+            background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500268314/sprite_ojtraw.png');
+            @include transition(.5s,
+            background);
+            &.facebook {
+                background-position: -10px -119px;
+                width: 24px;
+                height: 24px;
+            }
+            &.twitter {
+                background-position: -10px -255px;
+                width: 24px;
+                height: 24px;
+            }
+            &.drupal {
+                background-position: -10px -85px;
+                width: 24px;
+                height: 24px;
+            }
+            &.linkedin {
+                background-position: -10px -221px;
+                width: 24px;
+                height: 24px;
+            }
+            &.github {
+                background-position: -10px -153px;
+                width: 24px;
+                height: 24px;
+            }
+            &.instagram {
+                background-position: -10px -187px;
+                width: 24px;
+                height: 24px;
+            }
         }
-        .drupal {
-          background-position: -44px -85px;
-          width: 24px;
-          height: 24px;
-        }
-        .linkedin {
-          background-position: -44px -221px;
-          width: 24px;
-          height: 24px;
-        }
-        .github {
-          background-position: -44px -153px;
-          width: 24px;
-          height: 24px;
-        }
-        .instagram {
-          background-position: -44px -187px;
-          width: 24px;
-          height: 24px;
-        }
-      }
     }
-    .social-link {
-      display: inline-block;
-      width: rem(25);
-      height: rem(25);
-      background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500268314/sprite_ojtraw.png');
-      @include transition(.5s,
-      background);
-      &.facebook {
-        background-position: -10px -119px;
-        width: 24px;
-        height: 24px;
-      }
-      &.twitter {
-        background-position: -10px -255px;
-        width: 24px;
-        height: 24px;
-      }
-      &.drupal {
-        background-position: -10px -85px;
-        width: 24px;
-        height: 24px;
-      }
-      &.linkedin {
-        background-position: -10px -221px;
-        width: 24px;
-        height: 24px;
-      }
-      &.github {
-        background-position: -10px -153px;
-        width: 24px;
-        height: 24px;
-      }
-      &.instagram {
-        background-position: -10px -187px;
-        width: 24px;
-        height: 24px;
-      }
+    .footer {
+        position: relative;
+        line-height: 2;
+        >div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .strike {
+            height: 1px;
+            width: 370px;
+            background: $light-grey;
+        }
+        .footer-info {
+            width: 450px;
+            @media screen and ($bp-smaller-than-phablet) {
+                width: 100%;
+            }
+        }
     }
-  }
-  .footer {
-    position: relative;
-    line-height: 2;
-    >div {
-      display: inline-block;
-      vertical-align: middle;
+    .like {
+        background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500268314/sprite_ojtraw.png');
+        background-position: -10px -43px;
+        width: 32px;
+        height: 32px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 .5rem;
     }
-    .strike {
-      height: 1px;
-      width: 370px;
-      background: $light-grey;
+    .jekyll {
+        background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500268314/sprite_ojtraw.png');
+        background-position: -10px -0px;
+        width: 75px;
+        height: 33px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 .5rem;
     }
-    .footer-info {
-      width: 450px;
-      @media screen and ($bp-smaller-than-phablet) {
-        width: 100%;
-      }
-    }
-  }
-  .like {
-    background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500268314/sprite_ojtraw.png');
-    background-position: -10px -43px;
-    width: 32px;
-    height: 32px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 .5rem;
-  }
-  .jekyll {
-    background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500268314/sprite_ojtraw.png');
-    background-position: -10px -0px;
-    width: 75px;
-    height: 33px;
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 .5rem;
-  }
 }
 
 .page-type-post {
-  display: none;
+    display: none;
 }
 
 .pace {
-  -webkit-pointer-events: none;
-  pointer-events: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .pace-inactive {
-  display: none;
+    display: none;
 }
 
 .pace .pace-progress {
-  background: $link-color-hover;
-  position: fixed;
-  z-index: 2000;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 2px;
+    background: $link-color-hover;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
 }
 
 .page-content {
-  .line-heading {
-    position: relative;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    &:before {
-      content: '';
-      position: absolute;
-      height: 2px;
-      background: #D91E18;
-      width: 1200%;
-      right: 102%;
-      top: 50%;
-      transform: translateY(-50%);
+    .line-heading {
+        position: relative;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background: #D91E18;
+            width: 1200%;
+            right: 102%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
-  }
 }

@@ -60,4 +60,18 @@ window.onload = function () {
       $('body').toggleClass('no-overflow');
     })
   });
+
+  $('#search-button').click(
+    function () {
+      $.ajax({
+        url: '/search.html',
+        dataType: 'html',
+        success: function (response) {
+          $("#search-overlay").html(response);
+        }
+      });
+      $("#search-overlay").toggleClass('overlay-open');
+      $('body').toggleClass('search-overlay-open');
+    }
+  );
 }

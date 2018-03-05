@@ -89,9 +89,10 @@
 
 .site--menu{
   overflow: hidden;
-  display: block;
+  display: flex;
+  color: $white;
+  justify-content: flex-end;
   .humburger-menu{
-    float: right;
     z-index: 100;
     .text-menu{
       color: $white;
@@ -276,10 +277,33 @@
 }
 
 .menu-open{
-  .site-title, .site-links, .text-menu{
+  .site-title, .site-links, .text-menu, .text-search{
     color: $white !important;
   }
   .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after{
     background: $white !important;
+  }
+  #search {
+    path {
+      fill: $white !important;
+    }
+  }
+}
+
+.site--search {
+  margin-right: 2rem;
+  .text-search {
+    display: inline-block;
+    vertical-align: top;
+    color: $white;
+  }
+  svg {
+    padding: 1.3rem .5rem;
+    display: inline-block;
+  }
+  #search {
+    path {
+      fill: $white;
+    }
   }
 }
