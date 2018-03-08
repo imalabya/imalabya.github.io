@@ -1,89 +1,140 @@
 /* Homepage */
-.post-item{
-  border-bottom: 1px solid $whisper;
-  .post-title{
-    margin-bottom: 1.5rem;
-    line-height: 1;
-    font-size: 1.5rem;
-    letter-spacing: normal;
-    font-family: $azosans-regular;
-    font-weight: 600;
-  }
-  .post-subtitle{
-    color: $body-color;
-    font-size: rem(18);
-  }
-  .post-meta{
-    font-family: $lora;
-    display: block;
-    margin-bottom: 1rem;
-  }
+
+.post-item {
+    border-bottom: 1px solid $whisper;
+    .post-title {
+        margin-bottom: 1.5rem;
+        line-height: 1;
+        font-size: 1.5rem;
+        letter-spacing: normal;
+        font-family: $azosans-regular;
+        font-weight: 600;
+    }
+    .post-subtitle {
+        color: $body-color;
+        font-size: rem(18);
+    }
+    .post-meta {
+        font-family: $lora;
+        display: block;
+        margin-bottom: 1rem;
+    }
 }
 
 .hero-banner {
-  background: #e53935 url('http://res.cloudinary.com/imalabya-media/image/upload/v1517462297/background_xclzqa.jpg') no-repeat center center;
-  min-height: 30rem;
-  box-shadow: 0 0 10px #000;
-  position: relative;
-  .hero-text{
-    position: absolute;
-    z-index: 100;
-    color: #fff;
-    left: 50%;
-    top: 50%;
-    font-size: 120%;
-    transform: translate3d(-50%, -50%, 0);
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    -moz-transform: translate3d(-50%, -50%, 0);
-    -o-transform: translate3d(-50%, -50%, 0);
-    img, .rotate-text{
-      display: inline-block;
-      vertical-align: top
+    background: $black;
+    min-height: 40rem;
+    box-shadow: 0 0 10px #000;
+    position: relative;
+    .hero-text {
+        @media screen and ($bp-larger-than-phablet) {
+            width: 60rem;
+            padding: 0;
+            top: 50%;
+        }
+        top: 55%;
+        width: 100%;
+        padding: 0 1rem;
+        box-sizing: border-box;
+        position: absolute;
+        z-index: 100;
+        color: #fff;
+        left: 50%;
+        font-size: 120%;
+        transform: translate3d(-50%, -50%, 0);
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        -moz-transform: translate3d(-50%, -50%, 0);
+        -o-transform: translate3d(-50%, -50%, 0);
+        .hero-text-inside {
+            @media screen and ($bp-larger-than-phablet) {
+                display: flex
+            }
+            display: block;
+            .banner-image {
+                @media screen and ($bp-larger-than-phablet) {
+                    min-width: 20rem;
+                    min-height: 20rem;
+                }
+                min-width: 0;
+                min-height: 18rem;
+                margin-right: 3rem;
+                background: url('http://res.cloudinary.com/imalabya-media/image/upload/a_auto_right.hflip.ignore,q_100/a_0/v1520452355/image_vxe0ct.jpg') no-repeat;
+                background-size: contain;
+                box-shadow: inset 0 0 100px 25px $black;
+            }
+            .banner-text {
+                @media screen and ($bp-larger-than-phablet) {
+                    font-size: 100%;
+                    h1 {
+                        font-size: 5rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+                font-size: 80%;
+                h1 {
+                    font-size: 3rem;
+                    margin-bottom: 1rem;
+                }
+                .rotate {
+                    line-height: 1.75;
+                }
+            }
+            .button {
+                padding: 0;
+                margin: 0;
+                border: none;
+                font-size: 1rem;
+                color: $white;
+                @include transition(.25s,
+                all);
+                &:after {
+                    content: '\02192';
+                    @include transition(.25s,
+                    all);
+                    position: relative;
+                    left: .5rem;
+                    top: 3px;
+                    color: $white;
+                }
+                &:hover {
+                    color: $link-color-hover;
+                    &:after {
+                        color: $link-color-hover;
+                        left: 1rem;
+                    }
+                }
+            }
+        }
     }
-    .rotate-text{
-      min-width: rem(310);
+    .hero-title {
+        font-family: $azosans-bold;
+        .underline {
+            border-bottom: 2px solid $link-color-hover;
+        }
+        .light {
+            font-family: $azosans-light;
+        }
     }
-    img{
-      margin-right: 1.5rem;
-      border-radius: 50%;
-      border: 10px solid #eee;
+    .rotate {
+        display: block;
+        width: 100%;
+        min-height: 2rem;
+        margin-bottom: 2rem;
     }
-  }
-  .hero-title{
-    font-family: $azosans-bold;
-    .underline{
-      border-bottom: 2px solid $link-color-hover;
-    }
-    .light{
-      font-family: $azosans-light;
-    }
-  }
-  .rotate{
-    display: block;
-    width: 100%;
-    min-height: 2rem;
-    margin-bottom: 1rem;
-  }
-  .button{
-    display: inline-block;
-    color: #fff;
-    border: 1px solid $white;
-    padding: .5rem 1rem;
-  }
 }
 
-.rss-subscribe{
-  text-align: center;
-  a{
-    position: relative;
-    &:after{
-      content: '';
-      width: 1rem;
-      height: 1rem;
-      background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500270729/rss_aebjq0.png') no-repeat;
-      display: inline-block;
-      background-size: 1rem;
-      margin-left: .75rem;
+.rss-subscribe {
+    text-align: center;
+    a {
+        position: relative;
+        &:after {
+            content: '';
+            width: 1rem;
+            height: 1rem;
+            background: url('http://res.cloudinary.com/imalabya-media/image/upload/v1500270729/rss_aebjq0.png') no-repeat;
+            display: inline-block;
+            background-size: 1rem;
+            margin-left: .75rem;
+        }
     }
-  }
 }
