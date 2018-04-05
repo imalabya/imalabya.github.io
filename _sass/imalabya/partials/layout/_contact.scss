@@ -1,3 +1,13 @@
 .contact-form {
-  
+  margin: 3rem auto 0 auto;
+  width: 80%;
+  .form-mail-tel-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    align-items: center;
+    > .form-element {
+      flex: 0 0 45%;
+    }
+  }
 }

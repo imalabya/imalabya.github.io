@@ -1,15 +1,32 @@
 .form-element {
-  margin: 2rem 0;
+  margin: 0 0 2.5rem 0;
   position: relative;
   label {
+    position: absolute;
+    top: .875rem;
     display: block;
-    opacity: .5;
-    font-size: 1rem;
+    font-family: $azosans-bold;
+    font-size: .875rem;
+    z-index: 1;
+    @include transition(.25s, all);
+    &.required {
+      &:after {
+        content: '\0002A';
+        position: absolute;
+      }
+    }
+  }
+  &.in-focus, &.has-value {
+    label {
+      top: -1rem;
+      color: $link-color-hover;
+      font-size: .75rem;
+    }
   }
   input, textarea {
     display: block;
     width: 100%;
-    min-height: 3rem;
+    padding: .75rem 0;
     font-size: 1rem;
     line-height: 1.5;
     border: none;

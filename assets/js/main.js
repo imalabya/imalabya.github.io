@@ -61,6 +61,7 @@ window.onload = function () {
     })
   });
 
+  // Search modal
   $('#search-button').click(
     function () {
       $.ajax({
@@ -74,4 +75,17 @@ window.onload = function () {
       $('body').toggleClass('search-overlay-open');
     }
   );
+
+  // FLoating label
+  var input = $('.form-element :input');
+  var form_elem = $('.form-element');
+  var events = "propertychange change paste input";
+  input.focus( function() {
+    $(this).closest(form_elem).addClass("in-focus")
+  }).blur( function() {
+    $(this).closest(form_elem).removeClass("in-focus")
+  }), input.bind( events, function() {
+    var e = $(this).val();
+    "" === e || e.length < 1 ? $(this).closest(form_elem).removeClass("has-value") : $(this).closest(form_elem).addClass("has-value")
+  })
 }
