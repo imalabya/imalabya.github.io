@@ -88,4 +88,7 @@ window.onload = function () {
     var e = $(this).val();
     "" === e || e.length < 1 ? $(this).closest(form_elem).removeClass("has-value") : $(this).closest(form_elem).addClass("has-value")
   })
+
+  // Open links in posts in a new tab
+  $('.post-content a').attr("target", "_blank");
 }
