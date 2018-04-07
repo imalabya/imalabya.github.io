@@ -1,0 +1,22 @@
+{% unless page.category == null %}
+  {% capture pageCategory %}{{ page.category }}{% endcapture %}
+  {% unless site.categories[pageCategory].size == 1 %}
+    <div class="related-posts">
+      <h2 class="related-posts-title" data-title='Related'>More {{ page.category }} Posts!</h2>
+      <div class="posts">
+        {% for post in site.categories[pageCategory] limit:5 %}
+          {% unless post.title == page.title %}
+          <div class="post">
+            <span>{{ post.date | date: '%B %d, %Y' }}</span>
+            <h3>
+              <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
+                {{ post.title }}
+              </a>
+            </h3>
+          </div>
+          {% endunless %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endunless %}
+{% endunless %}
