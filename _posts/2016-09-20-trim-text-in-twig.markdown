@@ -14,18 +14,18 @@ Directly putting the twig variable of the field will not yeild any result. Since
 
 We need the rendered output from the field variable. Once we have the rendered output, strip out the HTML tags to get the clean raw text out of the field.
 
-{% highlight html%}
-{% raw %}
-{% set text = content.body|render|striptags %}
-{% endraw %}
+{% highlight twig%}
+  {% raw %}
+  {% set text = content.body|render|striptags %}
+  {% endraw %}
 {% endhighlight %}
 
 Now, that we have the raw text out of the field value, we can use the twig slice filter to get the trimmed result with ellipses.
 
-{% highlight html%}
-{% raw %}
-{{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
-{% endraw %}
+{% highlight twig%}
+  {% raw %}
+  {{ text|length > 100 ? text|slice(0, 100) ~ '...' : text }}
+  {% endraw %}
 {% endhighlight %}
 
 It's advisible to truncate strings with html is generally a bad idea due to having potential unclosed or malformed tags.

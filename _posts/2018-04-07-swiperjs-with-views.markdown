@@ -45,38 +45,16 @@ Twig is the powerful templating engine for Drupal 8. Twig have a naming conventi
 
 `views-view-DISPLAYNAME--VIEWS_MACHINENAME--DISPLAY_MACHINENAME.html.twig`
 
-Based on this, I created a twig file named `views-view-unformatted--article-slideshow--page-1.html.twig`.
+Based on this, I created a twig file named `views-view-unformatted--article-swiper--page-1.html.twig`.
 
 If you dig the code for `views-view-unformatted.html.twig`, you can see it renders each row while running in a loop.
 
-{% highlight twig %}
-  {% for row in rows %}
-    {% set row_classes = [ default_row_class ? 'views-row', ] %}
-    <div{{ row.attributes.addClass(row_classes) }}>
-      {{ row.content }}
-    </div>
-  {% endfor %}
-{% endhighlight %}
+<script src="https://gist.github.com/imalabya/bbd8c41af7c6f7f287a9c22c46f8eafd.js"></script>
 
 All, I had to do is add a `swiper-container` class followed by a `swiper-wrapper` class outside the for loop. Also, an additional `swiper-slides` along with the `views-row` class.
 
-{% highlight twig %}
-  {{ attach_library('drupal/swiperjs') }}
-
-  <div class="article-swiper-container">
-    <div class="swiper-wrapper">
-      {% for row in rows %}
-        {% set row_classes = [ default_row_class ? 'views-row', 'swiper-slide' ] %}
-        <div{{ row.attributes.addClass(row_classes) }}>
-          {{ row.content }}
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-{% endhighlight %}
+<script src="https://gist.github.com/imalabya/254c43e02114bd3e9c1294279aef6b0c.js"></script>
 
 If you notice, on top I have attached a library where the JS to initialize the swiper will be written, to initialize and keep the swiperjs plugin to load only for the pages where it is required.
 
-![Views Unformatted](http://res.cloudinary.com/imalabya-media/image/upload/c_scale,w_1920/v1523099421/Screen_Shot_2018-04-07_at_4.38.16_PM_gmnual.png)
---
-![Swiper](http://res.cloudinary.com/imalabya-media/image/upload/v1523099933/Swipergif_qxu1rc.gif)
+<img src='http://res.cloudinary.com/imalabya-media/image/upload/v1523104814/Swipergif-full_u4zb2m.gif' class='gif' alt='Demo'>
