@@ -23,8 +23,7 @@
 
 .hero-banner {
     background: $black;
-    min-height: 40rem;
-    box-shadow: 0 0 10px #000;
+    min-height: 45rem;
     position: relative;
     .hero-text {
         @media screen and ($bp-larger-than-phablet) {
@@ -80,29 +79,8 @@
                 }
             }
             .button {
-                padding: 0;
-                margin: 0;
-                border: none;
-                font-size: 1rem;
                 color: $white;
-                @include transition(.25s,
-                all);
-                &:after {
-                    content: '\02192';
-                    @include transition(.25s,
-                    all);
-                    position: relative;
-                    left: .5rem;
-                    top: 3px;
-                    color: $white;
-                }
-                &:hover {
-                    color: $link-color-hover;
-                    &:after {
-                        color: $link-color-hover;
-                        left: 1rem;
-                    }
-                }
+                @include button-cta();
             }
         }
     }
